@@ -1,0 +1,241 @@
+---
+---
+
+<div class="fixed-contact-bar">
+  <div class="contact-bar-container">
+    <div class="contact-section">
+      <div class="contact-item">
+        <i class="fas fa-user-tie"></i>
+        <div class="contact-content">
+          <span class="contact-label">Contacta a tu Asesor de Ventas</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-section whatsapp-section">
+      <div class="contact-item">
+        <i class="fab fa-whatsapp"></i>
+        <div class="contact-content">
+          <a href="https://wa.me/51992767584" target="_blank" class="contact-link">
+            <span class="contact-label">WhatsApp</span>
+            <span class="contact-value">+51 992 767 584</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-section">
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <div class="contact-content">
+          <a href="mailto:ventas@haroperupacifico.com" class="contact-link">
+            <span class="contact-label">Correo</span>
+            <span class="contact-value">ventas@haroperupacifico.com</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-section">
+      <div class="contact-item">
+        <i class="fas fa-headset"></i>
+        <div class="contact-content">
+          <a href="tel:+51992767584" class="contact-link">
+            <span class="contact-label">Soporte Técnico</span>
+            <span class="contact-value">+51 992 767 584</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .fixed-contact-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--primary-black);
+    color: var(--white);
+    z-index: 1000;
+    box-shadow: var(--shadow-xl);
+    border-top: 3px solid var(--primary-red);
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                opacity 0.3s ease;
+  }
+
+  .fixed-contact-bar.visible {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .fixed-contact-bar.hidden {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  .contact-bar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    padding: 0;
+  }
+
+  .contact-section {
+    padding: 14px 16px;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all var(--transition-fast);
+  }
+
+  .contact-section:last-child {
+    border-right: none;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 100%;
+  }
+
+  .contact-item i {
+    font-size: 1.2rem;
+    color: var(--primary-red);
+    width: 20px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .contact-content {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .contact-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: #cbd5e1;
+    margin-bottom: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .contact-value {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--white);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .contact-link {
+    text-decoration: none;
+    color: inherit;
+    transition: all var(--transition-fast);
+  }
+
+  .contact-link:hover {
+    color: var(--primary-red-light);
+  }
+
+  .contact-link:hover .contact-value {
+    color: var(--primary-red-light);
+  }
+
+  .contact-section:hover {
+    background: var(--secondary-black);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .contact-section:hover .contact-item i {
+    color: var(--primary-red-light);
+    transform: scale(1.1);
+  }
+
+  /* WhatsApp section styling */
+  .whatsapp-section {
+    background: rgba(37, 211, 102, 0.1);
+  }
+
+  .whatsapp-section .contact-item i {
+    color: #25D366;
+  }
+
+  .whatsapp-section:hover {
+    background: rgba(37, 211, 102, 0.15);
+  }
+
+  .whatsapp-section:hover .contact-item i {
+    color: #1DA851;
+    transform: scale(1.15);
+  }
+
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .contact-bar-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contact-section {
+      padding: 10px 12px;
+    }
+
+    .contact-label {
+      font-size: 0.7rem;
+    }
+
+    .contact-value {
+      font-size: 0.8rem;
+    }
+
+    .contact-item i {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .contact-bar-container {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-section {
+      border-right: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .contact-section:last-child {
+      border-bottom: none;
+    }
+
+    .contact-item {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  /* Add bottom padding to body to prevent content from being hidden */
+  body {
+    padding-bottom: 80px;
+  }
+
+  @media (max-width: 768px) {
+    body {
+      padding-bottom: 100px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    body {
+      padding-bottom: 160px;
+    }
+  }
+</style>
