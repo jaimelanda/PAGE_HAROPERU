@@ -396,6 +396,9 @@ import tiendaFisicaHaro from '../assets/images/tienda_fisica_haro.jpg?url';
       max-width: 100%;
       box-sizing: border-box;
       padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .about-image {
@@ -406,16 +409,19 @@ import tiendaFisicaHaro from '../assets/images/tienda_fisica_haro.jpg?url';
 
     .about-text h2 {
       font-size: 2.2rem;
+      text-align: center;
+      white-space: normal;
     }
 
     .about-text h3 {
       font-size: 1.2rem;
       margin-bottom: 25px;
+      text-align: center;
     }
 
     .about-text p {
       font-size: 1.05rem;
-      text-align: left;
+      text-align: center;
     }
 
     .about-text p:first-of-type {
@@ -423,19 +429,22 @@ import tiendaFisicaHaro from '../assets/images/tienda_fisica_haro.jpg?url';
     }
 
     .features {
-      grid-template-columns: 1fr;
-      gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
     }
 
     .feature {
       flex-direction: column;
       align-items: center;
       text-align: center;
-      padding: 20px 15px;
+      padding: 12px 8px;
     }
 
     .feature i {
-      margin-bottom: 15px;
+      margin-bottom: 8px;
+      width: 36px;
+      height: 36px;
+      font-size: 1rem;
     }
 
     .feature-content {
@@ -444,8 +453,9 @@ import tiendaFisicaHaro from '../assets/images/tienda_fisica_haro.jpg?url';
     }
 
     .feature h4 {
-      font-size: 1rem;
-      margin-bottom: 10px;
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+      white-space: nowrap;
     }
 
     .feature p {
