@@ -3,115 +3,121 @@
 
 <header class="header">
   <!-- Top Info Bar -->
-  <div class="top-header">
-    <div class="container">
-      <div class="top-info">
-        <div class="contact-info">
-          <span class="info-item">
-            <i class="fas fa-phone"></i>
+  <div class="bg-black text-white py-1.5 fixed top-0 left-0 right-0 z-[1002] transition-all duration-300 text-sm">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="flex justify-between items-center">
+        <div class="flex gap-8">
+          <span class="flex items-center gap-2 text-white">
+            <i class="fas fa-phone text-red-600 w-4"></i>
             992 767 584
           </span>
-          <span class="info-item">
-            <i class="fas fa-envelope"></i>
+          <span class="flex items-center gap-2 text-white">
+            <i class="fas fa-envelope text-red-600 w-4"></i>
             info@haroperu.com
           </span>
-          <span class="info-item">
-            <i class="fas fa-clock"></i>
+          <span class="flex items-center gap-2 text-white">
+            <i class="fas fa-clock text-red-600 w-4"></i>
             Lun - Sáb: 9:00 AM - 6:00 PM
           </span>
         </div>
-        <div class="social-links">
-          <a href="https://www.facebook.com/HaroPeru1" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/harodireccionhidraulica/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.tiktok.com/@haro_direccionhidraulica" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
-          <a href="https://wa.me/51992767584" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <div class="flex gap-4">
+          <a href="https://www.facebook.com/HaroPeru1" target="_blank" title="Facebook" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-red-600 hover:-translate-y-0.5 transition-all duration-300 text-sm">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/harodireccionhidraulica/" target="_blank" title="Instagram" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-red-600 hover:-translate-y-0.5 transition-all duration-300 text-sm">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.tiktok.com/@haro_direccionhidraulica" target="_blank" title="TikTok" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-red-600 hover:-translate-y-0.5 transition-all duration-300 text-sm">
+            <i class="fab fa-tiktok"></i>
+          </a>
+          <a href="https://wa.me/51992767584" target="_blank" title="WhatsApp" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-red-600 hover:-translate-y-0.5 transition-all duration-300 text-sm">
+            <i class="fab fa-whatsapp"></i>
+          </a>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Main Header -->
-  <div class="main-header">
-    <div class="container">
-      <div class="header-content">
+  <div class="bg-white py-3 shadow-sm fixed top-11 left-0 right-0 z-[1001] transition-all duration-300 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="flex items-center justify-between gap-10 relative">
         <!-- Logo -->
-        <div class="logo">
-          <a href="/" class="logo-link">
-            <div class="logo-image">
-              <img src="/images/logo.png" alt="HARO PERÚ PACÍFICO" class="logo-img">
+        <div class="flex-shrink-0">
+          <a href="/" class="flex items-center gap-4 hover:-translate-y-0.5 transition-all duration-300">
+            <div class="flex items-center">
+              <img src="/images/logo.png" alt="HARO PERÚ PACÍFICO" class="h-12 w-auto transition-all duration-300 hover:scale-105">
             </div>
           </a>
         </div>
 
         <!-- Navigation Menu -->
-        <ul class="nav-menu">
-          <li><a href="/">Inicio</a></li>
-          <li class="dropdown">
-            <a href="#productos">Productos <i class="fas fa-chevron-down"></i></a>
-            <div class="dropdown-menu">
-              <div class="dropdown-grid">
+        <ul class="nav-menu flex list-none m-0 p-0 gap-8 flex-1 justify-center">
+          <li><a href="/" class="flex items-center gap-1 py-4 text-gray-900 font-semibold text-sm hover:text-red-600 transition-colors duration-300">Inicio</a></li>
+          <li class="dropdown relative">
+            <a href="#productos" class="flex items-center gap-1 py-4 text-gray-900 font-semibold text-sm hover:text-red-600 transition-colors duration-300">Productos <i class="fas fa-chevron-down text-xs transition-transform duration-300"></i></a>
+            <div class="dropdown-menu absolute top-full left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-2xl min-w-[900px] opacity-0 invisible -translate-y-2 transition-all duration-300 z-[1000]">
+              <div class="grid grid-cols-3 gap-6 p-8">
                 <div class="dropdown-column">
-                  <h4>Dirección Hidráulica</h4>
-                  <ul>
-                    <li><a href="#bombas-hidraulicas">Cremalleras Hidráulicas</a></li>
-                    <li><a href="#cajas-hidraulicas">Cajas de Dirección</a></li>
-                    
+                  <h4 class="text-red-600 text-sm font-semibold mb-3 uppercase tracking-wide">Dirección Hidráulica</h4>
+                  <ul class="list-none p-0 m-0">
+                    <li class="mb-1.5"><a href="#bombas-hidraulicas" class="text-gray-600 text-sm py-1 block hover:text-red-600 transition-colors duration-300">Cremalleras Hidráulicas</a></li>
+                    <li class="mb-1.5"><a href="#cajas-hidraulicas" class="text-gray-600 text-sm py-1 block hover:text-red-600 transition-colors duration-300">Cajas de Dirección</a></li>
                   </ul>
                 </div>
                 <div class="dropdown-column">
-                  <h4>Dirección Asistida</h4>
-                  <ul>
-                    <li><a href="#cremalleras">Cremalleras de Dirección</a></li>
+                  <h4 class="text-red-600 text-sm font-semibold mb-3 uppercase tracking-wide">Dirección Asistida</h4>
+                  <ul class="list-none p-0 m-0">
+                    <li class="mb-1.5"><a href="#cremalleras" class="text-gray-600 text-sm py-1 block hover:text-red-600 transition-colors duration-300">Cremalleras de Dirección</a></li>
                   </ul>
                 </div>
                 <div class="dropdown-column">
-                  <h4>Servos Hidráulicos</h4>
-                  <ul>
-                    <li><a href="#servos-direccion">Servos de Dirección</a></li>
-                    <li><a href="#reparaciones-servo">Kits de Reparación</a></li>
+                  <h4 class="text-red-600 text-sm font-semibold mb-3 uppercase tracking-wide">Servos Hidráulicos</h4>
+                  <ul class="list-none p-0 m-0">
+                    <li class="mb-1.5"><a href="#servos-direccion" class="text-gray-600 text-sm py-1 block hover:text-red-600 transition-colors duration-300">Servos de Dirección</a></li>
+                    <li class="mb-1.5"><a href="#reparaciones-servo" class="text-gray-600 text-sm py-1 block hover:text-red-600 transition-colors duration-300">Kits de Reparación</a></li>
                   </ul>
                 </div>
                 <div class="dropdown-column">
-                  <h4>Accesorios</h4>
-                  <ul>
-                    <li><a href="#conexiones">Rotores</a></li>
-                    <li><a href="#depositos-hidraulicos">Depósitos Hidráulicos</a></li>
+                  <h4 class="text-red-600 text-sm font-semibold mb-3 uppercase tracking-wide">Accesorios</h4>
+                  <ul class="list-none p-0 m-0">
+                    <li class="mb-1.5"><a href="#conexiones" class="text-gray-600 text-sm py-1 block hover:text-red-600 transition-colors duration-300">Rotores</a></li>
+                    <li class="mb-1.5"><a href="#depositos-hidraulicos" class="text-gray-600 text-sm py-1 block hover:text-red-600 transition-colors duration-300">Depósitos Hidráulicos</a></li>
                   </ul>
                 </div>
                 <div class="dropdown-column">
-                  <h4>Retenes</h4>
-                  <ul>
-                    <li><a href="#retenes-cremallera">Retenes de Cremallera</a></li>
-                    <li><a href="#kits-retenes">Kits de Retenes</a></li>
+                  <h4 class="text-red-600 text-sm font-semibold mb-3 uppercase tracking-wide">Retenes</h4>
+                  <ul class="list-none p-0 m-0">
+                    <li class="mb-1.5"><a href="#retenes-cremallera" class="text-gray-600 text-sm py-1 block hover:text-red-600 transition-colors duration-300">Retenes de Cremallera</a></li>
+                    <li class="mb-1.5"><a href="#kits-retenes" class="text-gray-600 text-sm py-1 block hover:text-red-600 transition-colors duration-300">Kits de Retenes</a></li>
                   </ul>
                 </div>
                 <div class="dropdown-column">
-                  <h4>Fajas</h4>
-                  <ul>
-                    <li><a href="#fajas-alternador">Fajas de Cremalleras</a></li>
+                  <h4 class="text-red-600 text-sm font-semibold mb-3 uppercase tracking-wide">Fajas</h4>
+                  <ul class="list-none p-0 m-0">
+                    <li class="mb-1.5"><a href="#fajas-alternador" class="text-gray-600 text-sm py-1 block hover:text-red-600 transition-colors duration-300">Fajas de Cremalleras</a></li>
                   </ul>
                 </div>
               </div>
             </div>
           </li>
-          <li><a href="#marcas">Marcas</a></li>
-          <li><a href="#nosotros">Nosotros</a></li>
-          <li><a href="#footer">Contacto</a></li>
+          <li><a href="#tiendas" class="flex items-center gap-1 py-4 text-gray-900 font-semibold text-sm hover:text-red-600 transition-colors duration-300">Tiendas</a></li>
+          <li><a href="#nosotros" class="flex items-center gap-1 py-4 text-gray-900 font-semibold text-sm hover:text-red-600 transition-colors duration-300">Nosotros</a></li>
+          <li><a href="#footer" class="flex items-center gap-1 py-4 text-gray-900 font-semibold text-sm hover:text-red-600 transition-colors duration-300">Contacto</a></li>
         </ul>
 
         <!-- Header Actions -->
-        <div class="header-actions">
-
-          <a href="https://wa.me/51992767584" target="_blank" class="action-btn quote-btn">
+        <div class="flex gap-4 flex-shrink-0 items-center order-2">
+          <a href="https://wa.me/51992767584" target="_blank" class="flex items-center gap-2 px-4 py-3 bg-red-600 text-white border-2 border-red-600 rounded-lg font-semibold text-sm hover:bg-red-700 hover:border-red-700 hover:-translate-y-0.5 transition-all duration-300">
             <i class="fas fa-calculator"></i>
             <span>Cotizar</span>
           </a>
         </div>
 
-        <div class="mobile-menu-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
+        <div class="mobile-menu-toggle hidden flex-col cursor-pointer p-1 gap-0.5 relative ml-4 order-3">
+          <span class="w-6 h-0.5 bg-red-600 transition-all duration-300"></span>
+          <span class="w-6 h-0.5 bg-red-600 transition-all duration-300"></span>
+          <span class="w-6 h-0.5 bg-red-600 transition-all duration-300"></span>
         </div>
       </div>
     </div>
@@ -160,303 +166,14 @@
 </script>
 
 <style>
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-
-  /* Top Header */
-  .top-header {
-    background: var(--primary-black);
-    color: var(--white);
-    padding: 6px 0;
-    font-size: 0.85rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1002;
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
-  }
-
-  .top-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .contact-info {
-    display: flex;
-    gap: 30px;
-  }
-
-  .info-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--white);
-  }
-
-  .info-item i {
-    color: var(--primary-red);
-    width: 16px;
-  }
-
-  .social-links {
-    display: flex;
-    gap: 15px;
-  }
-
-  .social-links a {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    text-decoration: none;
-    border-bottom: none;
-    transition: all var(--transition-normal);
-  }
-
-  .social-links a:hover {
-    background: var(--primary-red);
-    transform: translateY(-2px);
-  }
-
-  /* Main Header */
-  .main-header {
-    background: var(--white);
-    padding: 12px 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-    position: fixed;
-    top: 44px;
-    left: 0;
-    right: 0;
-    z-index: 1001;
-    transition: top 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
-                box-shadow 0.3s ease, 
-                background-color 0.3s ease;
-    border-bottom: 1px solid var(--gray-200);
-  }
-
-  .header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    position: relative;
-  }
-
-  /* Logo */
-  .logo {
-    flex-shrink: 0;
-  }
-
-  .logo-link {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    text-decoration: none;
-    transition: all var(--transition-normal);
-  }
-
-  .logo-link:hover {
-    transform: translateY(-2px);
-  }
-
-  .logo-image {
-    display: flex;
-    align-items: center;
-  }
-
-  .logo-img {
-    height: 50px;
-    width: auto;
-    transition: all var(--transition-normal);
-  }
-
-  .logo-link:hover .logo-img {
-    transform: scale(1.05);
-  }
-
-
-  /* Navigation Menu in Header */
-  .header-content .nav-menu {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 30px;
-    flex: 1;
-    justify-content: center;
-  }
-
-  .header-content .nav-menu > li > a {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 16px 0;
-    color: var(--text-black);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: color var(--transition-normal);
-  }
-
-  .header-content .nav-menu > li > a:hover {
-    color: var(--primary-red);
-  }
-
-  .header-content .nav-menu .fas {
-    font-size: 0.8rem;
-    transition: transform var(--transition-normal);
-  }
-
-  .header-content .dropdown:hover .fas {
-    transform: rotate(180deg);
-  }
-
-  /* Header Actions */
-  .header-actions {
-    display: flex;
-    gap: 15px;
-    flex-shrink: 0;
-    align-items: center;
-    order: 2;
-  }
-
-  .action-btn {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 16px;
-    background: var(--white);
-    border: 2px solid var(--gray-200);
-    border-radius: 8px;
-    text-decoration: none;
-    color: var(--text-black);
-    font-weight: 600;
-    font-size: 0.85rem;
-    transition: all var(--transition-normal);
-  }
-
-  .action-btn:hover {
-    border-color: var(--primary-red);
-    color: var(--primary-red);
-    transform: translateY(-2px);
-  }
-
-  .quote-btn {
-    background: var(--primary-red);
-    color: var(--white);
-    border-color: var(--primary-red);
-  }
-
-  .quote-btn:hover {
-    background: var(--primary-red-dark);
-    color: var(--white);
-    border-color: var(--primary-red-dark);
-  }
-
-  .quote-btn:hover {
-    background: var(--primary-red-dark);
-    border-color: var(--primary-red-dark);
-    color: var(--white);
-    transform: translateY(-2px);
-  }
-
-  /* Navigation */
-  .main-navigation {
-    background: var(--white);
-    border-bottom: 1px solid var(--gray-200);
-    position: fixed;
-    top: 140px;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    transition: all var(--transition-normal);
-    padding: 12px 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  }
-
-  .header.scrolled .main-header {
-    top: 0;
-    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-  }
-
-  .header.scrolled .top-header {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-
-  .nav-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    position: relative;
-  }
-
-  .nav-menu {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 25px;
-    flex: 1;
-    justify-content: center;
-  }
-
-  .nav-menu > li > a {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 12px 0;
-    color: var(--text-black);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: color var(--transition-normal);
-    border-bottom: 2px solid transparent;
-  }
-
-  .nav-menu > li > a:hover {
-    color: var(--primary-red);
-    border-bottom-color: var(--primary-red);
-  }
-
-  .nav-menu .fas {
-    font-size: 0.8rem;
-    transition: transform var(--transition-normal);
+  .dropdown:hover .dropdown-menu {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
   }
 
   .dropdown:hover .fas {
-    transform: rotate(180deg);
-  }
-
-  /* Mobile Menu Toggle */
-  .mobile-menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    padding: 5px;
-    gap: 3px;
-    position: relative;
-    margin-left: 15px;
-    order: 3;
-  }
-
-  .mobile-menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background: var(--primary-red);
-    transition: all var(--transition-normal);
+    transform: rotate(180deg) !important;
   }
 
   .mobile-menu-toggle.active span:nth-child(1) {
@@ -471,216 +188,16 @@
     transform: rotate(-45deg) translate(6px, -6px);
   }
 
-  /* Dropdown Menu */
-  .dropdown {
-    position: relative;
+  .header.scrolled .fixed {
+    top: 0 !important;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15) !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
   }
 
-  .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: -50%;
-    background: var(--white);
-    border: 1px solid var(--gray-200);
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    min-width: 900px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all var(--transition-normal);
-    z-index: 1000;
-  }
-
-  .dropdown:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-
-  .dropdown-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    padding: 30px;
-  }
-
-  .dropdown-column h4 {
-    color: var(--primary-red);
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin-bottom: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  .dropdown-column ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .dropdown-column li {
-    margin-bottom: 6px;
-  }
-
-  .dropdown-column a {
-    color: var(--text-gray);
-    text-decoration: none;
-    font-size: 0.85rem;
-    padding: 4px 0;
-    display: block;
-    transition: color var(--transition-normal);
-  }
-
-  .dropdown-column a:hover {
-    color: var(--primary-red);
-  }
-
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .top-header {
-      display: none;
-    }
-
-    .main-header {
-      top: 0;
-    }
-
-    .contact-info {
-      gap: 15px;
-    }
-
-    .info-item {
-      font-size: 0.8rem;
-    }
-
-    .social-links {
-      gap: 10px;
-    }
-
-    .nav-content {
-      gap: 15px;
-    }
-
-    .mobile-menu-toggle {
-      display: flex;
-    }
-
-    .header-content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 15px;
-      position: relative;
-    }
-
-    .logo {
-      order: 2;
-      margin: 0 auto;
-    }
-
-    .header-actions {
-      display: none;
-    }
-
-    .mobile-menu-toggle {
-      order: 3;
-      position: absolute;
-      right: 0;
-      margin-left: 0;
-    }
-
-    /* Mobile navigation */
-    .header-content .nav-menu {
-      display: flex;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: var(--white);
-      flex-direction: column;
-      gap: 0;
-      padding: 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(-20px);
-      transition: all var(--transition-normal);
-      justify-content: flex-start;
-      order: 4;
-      width: 100%;
-      z-index: 1000;
-      border-top: 1px solid var(--gray-200);
-    }
-
-    .header-content .nav-menu.active {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-
-    .nav-content {
-      flex-wrap: wrap;
-    }
-
-    .header-content .nav-menu > li {
-      width: 100%;
-    }
-
-    .header-content .nav-menu > li > a {
-      padding: 15px 0;
-      border-bottom: 1px solid var(--gray-100);
-      display: block;
-      width: 100%;
-      font-size: 16px;
-    }
-
-    .header-content .nav-menu > li:last-child > a {
-      border-bottom: none;
-    }
-
-    /* Hide dropdown menus in mobile */
-    .header-content .dropdown-menu {
-      display: none !important;
-    }
-
-    /* Remove dropdown arrow in mobile */
-    .header-content .nav-menu .fas.fa-chevron-down {
-      display: none;
-    }
-
-    /* Make dropdown links look like normal links */
-    .header-content .nav-menu .dropdown > a {
-      pointer-events: auto;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .container {
-      padding: 0 15px;
-    }
-
-    .top-info {
-      flex-direction: column;
-      gap: 10px;
-      text-align: center;
-    }
-
-    .contact-info {
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .logo-text h1 {
-      font-size: 1.5rem;
-    }
-
-
-    .action-btn {
-      padding: 10px 12px;
-      font-size: 0.8rem;
-    }
+  .header.scrolled .fixed:first-child {
+    transform: translateY(-100%) !important;
+    opacity: 0 !important;
   }
 
   /* Body padding to compensate for fixed header */
@@ -689,8 +206,126 @@
   }
 
   @media (max-width: 768px) {
+    .fixed:first-child {
+      display: none !important;
+    }
+
+    .fixed:last-child {
+      top: 0 !important;
+    }
+
+    .mobile-menu-toggle {
+      display: flex !important;
+    }
+
+    .header-content .flex {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 15px !important;
+      position: relative !important;
+    }
+
+    .header-content .flex-shrink-0 {
+      order: 2 !important;
+      margin: 0 auto !important;
+    }
+
+    .header-actions {
+      display: none !important;
+    }
+
+    .mobile-menu-toggle {
+      order: 3 !important;
+      position: absolute !important;
+      right: 0 !important;
+      margin-left: 0 !important;
+    }
+
+    /* Mobile navigation */
+    .nav-menu {
+      display: flex !important;
+      position: absolute !important;
+      top: 100% !important;
+      left: 0 !important;
+      right: 0 !important;
+      background: white !important;
+      flex-direction: column !important;
+      gap: 0 !important;
+      padding: 20px !important;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      transform: translateY(-20px) !important;
+      transition: all 0.3s ease !important;
+      justify-content: flex-start !important;
+      order: 4 !important;
+      width: 100% !important;
+      z-index: 1000 !important;
+      border-top: 1px solid rgb(229 231 235) !important;
+    }
+
+    .nav-menu.active {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: translateY(0) !important;
+    }
+
+    .nav-menu > li {
+      width: 100% !important;
+    }
+
+    .nav-menu > li > a {
+      padding: 15px 0 !important;
+      border-bottom: 1px solid rgb(243 244 246) !important;
+      display: block !important;
+      width: 100% !important;
+      font-size: 16px !important;
+    }
+
+    .nav-menu > li:last-child > a {
+      border-bottom: none !important;
+    }
+
+    /* Hide dropdown menus in mobile */
+    .dropdown-menu {
+      display: none !important;
+    }
+
+    /* Remove dropdown arrow in mobile */
+    .nav-menu .fas.fa-chevron-down {
+      display: none !important;
+    }
+
+    /* Make dropdown links look like normal links */
+    .nav-menu .dropdown > a {
+      pointer-events: auto !important;
+    }
+
     :global(body) {
-      padding-top: 65px;
+      padding-top: 65px !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .max-w-7xl {
+      padding: 0 15px !important;
+    }
+
+    .flex.justify-between.items-center {
+      flex-direction: column !important;
+      gap: 10px !important;
+      text-align: center !important;
+    }
+
+    .flex.gap-8 {
+      flex-direction: column !important;
+      gap: 10px !important;
+    }
+
+    .flex.items-center.gap-2 {
+      padding: 10px 12px !important;
+      font-size: 0.8rem !important;
     }
   }
 </style>

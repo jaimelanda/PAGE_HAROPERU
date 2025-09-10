@@ -23,140 +23,155 @@ import cherryLogo from '../assets/images/brands/14_cherry.png?url';
 import greatwallLogo from '../assets/images/brands/15_greatwall.png?url';
 ---
 
-<section class="products-section" id="productos">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Nuestros Productos</span>
-      <h2>Categorías Especializadas</h2>
-      <p>Encuentra la solución perfecta para tu vehículo en nuestras categorías especializadas de repuestos automotrices.</p>
+<section class="p-0 bg-gradient-to-br from-gray-50 to-gray-200 relative overflow-hidden" id="productos">
+  <!-- Decorative background gradient -->
+  <div class="absolute inset-0 bg-gradient-radial from-red-600/5 via-transparent to-transparent opacity-60 pointer-events-none"></div>
+  
+  <div class="max-w-none w-full m-0 p-0 relative z-10">
+    <div class="text-center mb-0 py-16 px-5 bg-white/95 backdrop-blur-sm">
+      <span class="text-red-600 font-semibold uppercase tracking-wider text-sm">Nuestros Productos</span>
+      <h2 class="text-4xl text-gray-800 my-4 font-bold">Categorías Especializadas</h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">Encuentra la solución perfecta para tu vehículo en nuestras categorías especializadas de repuestos automotrices.</p>
     </div>
     
-    <div class="categories-grid">
-      <div class="category-card hydraulic-steering">
-        <div class="category-image">
-          <img src={direccionHidraulica} alt="Dirección Hidráulica" />
-          <div class="category-overlay"></div>
-          <div class="category-content">
-            <h3>Dirección Hidráulica</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 mb-0 w-full">
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 relative h-[340px] hover:scale-105 hover:z-10 hover:shadow-2xl group m-2">
+        <div class="relative h-full overflow-hidden">
+          <img src={direccionHidraulica} alt="Dirección Hidráulica" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div class="absolute bottom-0 left-0 right-0 py-3 px-4 bg-white/10 backdrop-blur-md border-t border-white/20">
+            <div class="w-12 h-1 bg-white/80 rounded-full mb-2 transition-all duration-300 group-hover:w-16 group-hover:bg-red-500 drop-shadow-md"></div>
+            <h3 class="text-xl lg:text-2xl font-bold text-center drop-shadow-lg relative overflow-hidden paint-effect">
+              Dirección Hidráulica
+            </h3>
           </div>
         </div>
       </div>
       
-      <div class="category-card power-steering">
-        <div class="category-image">
-          <img src={direccionAsistida} alt="Dirección Asistida" />
-          <div class="category-overlay"></div>
-          <div class="category-content">
-            <h3>Dirección Asistida</h3>
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 relative h-[340px] hover:scale-105 hover:z-10 hover:shadow-2xl group m-2">
+        <div class="relative h-full overflow-hidden">
+          <img src={direccionAsistida} alt="Dirección Asistida" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div class="absolute bottom-0 left-0 right-0 py-3 px-4 bg-white/10 backdrop-blur-md border-t border-white/20">
+            <div class="w-12 h-1 bg-white/80 rounded-full mb-2 transition-all duration-300 group-hover:w-16 group-hover:bg-red-500 drop-shadow-md"></div>
+            <h3 class="text-xl lg:text-2xl font-bold text-center drop-shadow-lg relative overflow-hidden paint-effect">
+              Dirección Asistida
+            </h3>
           </div>
         </div>
       </div>
       
-      <div class="category-card hydraulic-servos">
-        <div class="category-image">
-          <img src={servosHidraulicos} alt="Servos Hidráulicos" />
-          <div class="category-overlay"></div>
-          <div class="category-content">
-            <h3>Servos Hidráulicos</h3>
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 relative h-[340px] hover:scale-105 hover:z-10 hover:shadow-2xl group m-2">
+        <div class="relative h-full overflow-hidden">
+          <img src={servosHidraulicos} alt="Servos Hidráulicos" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div class="absolute bottom-0 left-0 right-0 py-3 px-4 bg-white/10 backdrop-blur-md border-t border-white/20">
+            <div class="w-12 h-1 bg-white/80 rounded-full mb-2 transition-all duration-300 group-hover:w-16 group-hover:bg-red-500 drop-shadow-md"></div>
+            <h3 class="text-xl lg:text-2xl font-bold text-center drop-shadow-lg relative overflow-hidden paint-effect">
+              Servos Hidráulicos
+            </h3>
           </div>
         </div>
       </div>
       
-      <div class="category-card accessories">
-        <div class="category-image">
-          <img src={accesorios} alt="Accesorios" />
-          <div class="category-overlay"></div>
-          <div class="category-content">
-            <h3>Accesorios</h3>
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 relative h-[340px] hover:scale-105 hover:z-10 hover:shadow-2xl group m-2">
+        <div class="relative h-full overflow-hidden">
+          <img src={accesorios} alt="Accesorios" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div class="absolute bottom-0 left-0 right-0 py-3 px-4 bg-white/10 backdrop-blur-md border-t border-white/20">
+            <div class="w-12 h-1 bg-white/80 rounded-full mb-2 transition-all duration-300 group-hover:w-16 group-hover:bg-red-500 drop-shadow-md"></div>
+            <h3 class="text-xl lg:text-2xl font-bold text-center drop-shadow-lg relative overflow-hidden paint-effect">
+              Accesorios
+            </h3>
           </div>
         </div>
       </div>
       
-      <div class="category-card seals">
-        <div class="category-image">
-          <img src={retenes} alt="Retenes" />
-          <div class="category-overlay"></div>
-          <div class="category-content">
-            <h3>Retenes</h3>
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 relative h-[340px] hover:scale-105 hover:z-10 hover:shadow-2xl group m-2">
+        <div class="relative h-full overflow-hidden">
+          <img src={retenes} alt="Retenes" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div class="absolute bottom-0 left-0 right-0 py-3 px-4 bg-white/10 backdrop-blur-md border-t border-white/20">
+            <div class="w-12 h-1 bg-white/80 rounded-full mb-2 transition-all duration-300 group-hover:w-16 group-hover:bg-red-500 drop-shadow-md"></div>
+            <h3 class="text-xl lg:text-2xl font-bold text-center drop-shadow-lg relative overflow-hidden paint-effect">
+              Retenes
+            </h3>
           </div>
         </div>
       </div>
       
-      <div class="category-card belts">
-        <div class="category-image">
-          <img src={accesorios} alt="Fajas" />
-          <div class="category-overlay"></div>
-          <div class="category-content">
-            <h3>Fajas</h3>
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 relative h-[340px] hover:scale-105 hover:z-10 hover:shadow-2xl group m-2">
+        <div class="relative h-full overflow-hidden">
+          <img src={accesorios} alt="Fajas" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+          <div class="absolute bottom-0 left-0 right-0 py-3 px-4 bg-white/10 backdrop-blur-md border-t border-white/20">
+            <div class="w-12 h-1 bg-white/80 rounded-full mb-2 transition-all duration-300 group-hover:w-16 group-hover:bg-red-500 drop-shadow-md"></div>
+            <h3 class="text-xl lg:text-2xl font-bold text-center drop-shadow-lg relative overflow-hidden paint-effect">
+              Fajas
+            </h3>
           </div>
         </div>
       </div>
     </div>
     
-    <div class="brands-section">
-      <h3>Repuestos automotrices para todas las marcas</h3>
-      <div class="brands-carousel-container">
-        <div class="brands-carousel">
-          <div class="brand-logo">
-            <img src={toyotaLogo} alt="Toyota" />
+    <div class="text-center py-16 px-5 bg-white/95 border-t border-gray-200 overflow-hidden">
+      <h3 class="text-3xl text-gray-800 mb-12 font-semibold">Repuestos automotrices para todas las marcas</h3>
+      <div class="w-full overflow-hidden relative">
+        <div class="flex animate-scroll-brands hover:pause-animation" style="width: calc(200px * 15);">
+          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
+            <img src={toyotaLogo} alt="Toyota" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
           </div>
-          <div class="brand-logo">
-            <img src={nissanLogo} alt="Nissan" />
+          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
+            <img src={nissanLogo} alt="Nissan" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
           </div>
-          <div class="brand-logo">
-            <img src={hondaLogo} alt="Honda" />
+          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
+            <img src={hondaLogo} alt="Honda" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
           </div>
-          <div class="brand-logo">
-            <img src={fordLogo} alt="Ford" />
+          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
+            <img src={fordLogo} alt="Ford" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
           </div>
-          <div class="brand-logo">
-            <img src={chevroletLogo} alt="Chevrolet" />
+          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
+            <img src={chevroletLogo} alt="Chevrolet" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
           </div>
-          <div class="brand-logo">
-            <img src={hyundaiLogo} alt="Hyundai" />
+          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
+            <img src={hyundaiLogo} alt="Hyundai" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
           </div>
-          <div class="brand-logo">
-            <img src={kiaLogo} alt="Kia" />
+          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
+            <img src={kiaLogo} alt="Kia" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
           </div>
-          <div class="brand-logo">
-            <img src={mazdaLogo} alt="Mazda" />
+          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
+            <img src={mazdaLogo} alt="Mazda" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
           </div>
-          <div class="brand-logo">
-            <img src={suzukiLogo} alt="Suzuki" />
+          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
+            <img src={suzukiLogo} alt="Suzuki" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
           </div>
-          <div class="brand-logo">
-            <img src={mitsubishiLogo} alt="Mitsubishi" />
+          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
+            <img src={mitsubishiLogo} alt="Mitsubishi" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
           </div>
-          <div class="brand-logo">
-            <img src={changanLogo} alt="Changan" />
+          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
+            <img src={changanLogo} alt="Changan" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
           </div>
-          <div class="brand-logo">
-            <img src={dfksLogo} alt="DFKS" />
+          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
+            <img src={dfksLogo} alt="DFKS" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
           </div>
-          <div class="brand-logo">
-            <img src={geelyLogo} alt="Geely" />
+          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
+            <img src={geelyLogo} alt="Geely" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
           </div>
-          <div class="brand-logo">
-            <img src={cherryLogo} alt="Cherry" />
+          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
+            <img src={cherryLogo} alt="Cherry" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
           </div>
-          <div class="brand-logo">
-            <img src={greatwallLogo} alt="Great Wall" />
+          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
+            <img src={greatwallLogo} alt="Great Wall" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
           </div>
           <!-- Duplicate logos for seamless loop -->
-          <div class="brand-logo">
-            <img src={toyotaLogo} alt="Toyota" />
+          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
+            <img src={toyotaLogo} alt="Toyota" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
           </div>
-          <div class="brand-logo">
-            <img src={nissanLogo} alt="Nissan" />
+          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
+            <img src={nissanLogo} alt="Nissan" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
           </div>
-          <div class="brand-logo">
-            <img src={hondaLogo} alt="Honda" />
+          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
+            <img src={hondaLogo} alt="Honda" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
           </div>
-          <div class="brand-logo">
-            <img src={fordLogo} alt="Ford" />
+          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
+            <img src={fordLogo} alt="Ford" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
           </div>
-          <div class="brand-logo">
-            <img src={chevroletLogo} alt="Chevrolet" />
+          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
+            <img src={chevroletLogo} alt="Chevrolet" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
           </div>
         </div>
       </div>
@@ -164,368 +179,281 @@ import greatwallLogo from '../assets/images/brands/15_greatwall.png?url';
   </div>
 </section>
 
+<script>
+  // Intersection Observer for mobile scroll effects
+  if (typeof window !== 'undefined') {
+    const observerOptions = {
+      threshold: 0.5,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all product cards
+    document.addEventListener('DOMContentLoaded', () => {
+      const cards = document.querySelectorAll('#productos .group');
+      cards.forEach((card, index) => {
+        // Add staggered delay for each card
+        if (window.innerWidth <= 768) {
+          card.style.setProperty('--delay', `${index * 0.2}s`);
+        }
+        observer.observe(card);
+      });
+    });
+  }
+</script>
+
 <style>
-  .products-section {
-    padding: 0;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .products-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 20% 30%, rgba(216, 19, 36, 0.05) 0%, transparent 50%);
-    pointer-events: none;
-  }
-
-  .container {
-    max-width: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    z-index: 2;
-  }
-
-  .section-header {
-    text-align: center;
-    margin-bottom: 0;
-    padding: 60px 20px 40px 20px;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-  }
-
-  .section-label {
-    color: #d81324;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 0.9rem;
-  }
-
-  .section-header h2 {
-    font-size: 2.5rem;
-    color: #333;
-    margin: 15px 0;
-    font-weight: bold;
-  }
-
-  .section-header p {
-    font-size: 1.2rem;
-    color: #666;
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.6;
-  }
-
-  .categories-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0;
-    margin-bottom: 0;
-    width: 100%;
-  }
-
-  .category-card {
-    background: transparent;
-    border-radius: 0;
-    overflow: hidden;
-    transition: all 0.4s ease;
-    position: relative;
-    height: 280px;
-  }
-
-  .category-card:hover {
-    transform: scale(1.02);
-  }
-
-  .category-image {
-    position: relative;
-    height: 100%;
-    overflow: hidden;
-  }
-
-  .category-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-  }
-
-  .category-card:hover .category-image img {
-    transform: scale(1.05);
-  }
-
-  .category-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(216, 19, 36, 0.4));
-    opacity: 0.7;
-    transition: opacity 0.4s ease;
-  }
-
-  .category-card:hover .category-overlay {
-    opacity: 0.5;
-  }
-
-  .category-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 30px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 3;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
-  }
-
-  .category-card h3 {
-    font-size: 1.6rem;
-    margin: 0;
-    font-weight: 700;
-    line-height: 1.3;
-    color: white;
-    position: relative;
-    transition: all 0.3s ease;
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    display: inline-block;
-  }
-
-  .category-card h3::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -8px;
-    left: 50%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
-    transition: all 0.4s ease;
-    transform: translateX(-50%);
-  }
-
-  .category-card:hover h3 {
-    color: #fff;
-    transform: translateY(-5px);
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
-  }
-
-  .category-card:hover h3::after {
-    width: 120%;
-  }
-
-
-  .brands-section {
-    text-align: center;
-    padding: 60px 20px;
-    background: rgba(255, 255, 255, 0.95);
-    border-top: 1px solid #eee;
-    overflow: hidden;
-  }
-
-  .brands-section h3 {
-    font-size: 1.8rem;
-    color: #333;
-    margin-bottom: 50px;
-    font-weight: 600;
-  }
-
-  .brands-carousel-container {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .brands-carousel {
-    display: flex;
-    width: calc(200px * 15); /* Width for 15 logos (10 + 5 duplicates) */
-    animation: scroll-brands 30s linear infinite;
-  }
-
-  .brand-logo {
-    flex: 0 0 200px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    transition: transform 0.3s ease;
-  }
-
-  .brand-logo:hover {
-    transform: scale(1.1);
-  }
-
-  .brand-logo img {
-    max-width: 180px;
-    max-height: 100px;
-    object-fit: contain;
-    filter: none;
-    transition: all 0.3s ease;
-  }
-
-  .brand-logo:hover img {
-    transform: scale(1.05);
-  }
-
+  /* Custom brand carousel animation */
   @keyframes scroll-brands {
     0% {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-200px * 10)); /* Move by 10 logo widths */
+      transform: translateX(calc(-200px * 10));
     }
   }
-
-  /* Pause animation on hover */
-  .brands-carousel:hover {
+  
+  .animate-scroll-brands {
+    animation: scroll-brands 30s linear infinite;
+  }
+  
+  .pause-animation:hover {
     animation-play-state: paused;
   }
-
-  /* Tablet styles */
+  
+  /* Custom radial gradient for background */
+  .bg-gradient-radial {
+    background: radial-gradient(circle at 20% 30%, var(--tw-gradient-stops));
+  }
+  
+  /* Card hover effects */
+  .group:hover .w-12 {
+    width: 4rem;
+  }
+  
+  /* Paint brush effect for titles - only text */
+  .paint-effect {
+    background: linear-gradient(90deg, white 0%, white 50%, #ef4444 50%, #ef4444 100%);
+    background-size: 200% 100%;
+    background-position: 0% 0%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-position 0.8s ease-in-out;
+  }
+  
+  /* Hover effect: paint from left to right with red */
+  .group:hover .paint-effect {
+    background-position: 100% 0%;
+  }
+  
+  /* Mobile scroll effect - when card is visible */
+  @media (max-width: 768px) {
+    .paint-effect {
+      transition: background-position 1s ease-in-out calc(0.3s + var(--delay, 0s));
+    }
+    
+    .w-12 {
+      transition: width 0.6s ease-in-out calc(0.5s + var(--delay, 0s));
+    }
+    
+    .group.in-view .paint-effect {
+      background-position: 100% 0%;
+    }
+    
+    .group.in-view .w-12 {
+      width: 4rem;
+    }
+  }
+  
+  /* Responsive adjustments for modern cards */
   @media (max-width: 1024px) and (min-width: 769px) {
-    .categories-grid {
+    .md\:grid-cols-2 {
       grid-template-columns: repeat(2, 1fr);
     }
-
-    .category-card {
+    
+    .h-\[320px\] {
       height: 300px;
     }
-
-    .category-card h3 {
+    
+    .text-xl {
+      font-size: 1.125rem;
+    }
+    
+    .lg\:text-2xl {
       font-size: 1.5rem;
     }
   }
-
-  /* Mobile tablet styles */
+  
   @media (max-width: 768px) and (min-width: 481px) {
-    .section-header {
-      padding: 40px 15px 20px 15px;
+    .py-16 {
+      padding-top: 2.5rem;
+      padding-bottom: 1.25rem;
     }
-
-    .section-header h2 {
+    
+    .text-4xl {
       font-size: 2rem;
     }
-
-    .categories-grid {
+    
+    .md\:grid-cols-2 {
       grid-template-columns: repeat(2, 1fr);
-      gap: 0;
     }
-
-    .category-card {
+    
+    .h-\[320px\] {
       height: 280px;
     }
-
-    .category-content {
-      padding: 25px 15px;
+    
+    .m-2 {
+      margin: 0.25rem;
     }
-
-    .category-card h3 {
-      font-size: 1.4rem;
+    
+    .p-6 {
+      padding: 1rem;
     }
-
-    .brands-section h3 {
+    
+    .text-xl {
+      font-size: 1rem;
+    }
+    
+    .lg\:text-2xl {
+      font-size: 1.25rem;
+    }
+    
+    .text-3xl {
       font-size: 1.6rem;
-      margin-bottom: 30px;
     }
-
-    .brand-logo {
-      flex: 0 0 180px;
+    
+    .mb-12 {
+      margin-bottom: 1.875rem;
+    }
+    
+    .flex-none.w-\[200px\] {
+      width: 180px;
+    }
+    
+    .h-\[100px\] {
       height: 80px;
-      padding: 15px;
     }
-
-    .brand-logo img {
+    
+    .p-5 {
+      padding: 0.9375rem;
+    }
+    
+    .max-w-\[180px\] {
       max-width: 100px;
+    }
+    
+    .max-h-\[100px\] {
       max-height: 50px;
     }
   }
-
-  /* Phone styles */
+  
   @media (max-width: 480px) {
-    .container {
-      padding: 0;
-      margin: 0;
-      max-width: 100%;
+    .py-16 {
+      padding-top: 1.875rem;
+      padding-bottom: 1.25rem;
     }
-
-    .section-header {
-      padding: 30px 15px 20px 15px;
-    }
-
-    .section-header h2 {
+    
+    .text-4xl {
       font-size: 1.8rem;
     }
-
-    .section-header p {
+    
+    .text-xl {
       font-size: 1rem;
     }
-
-    .categories-grid {
+    
+    .lg\:grid-cols-3 {
       grid-template-columns: 1fr;
-      gap: 0;
       width: 100vw;
       margin-left: calc(-50vw + 50%);
     }
-
-    .category-card {
-      height: 250px;
-      margin: 0;
-      width: 100%;
+    
+    .h-\[320px\] {
+      height: 280px;
     }
-
-    .category-image {
-      width: 100%;
+    
+    .m-2 {
+      margin: 0.125rem;
     }
-
-    .category-image img {
-      width: 100%;
+    
+    .p-6 {
+      padding: 0.875rem;
     }
-
-    .category-content {
-      padding: 25px 20px;
+    
+    .text-xl {
+      font-size: 0.95rem;
     }
-
-    .category-card h3 {
-      font-size: 1.3rem;
+    
+    .lg\:text-2xl {
+      font-size: 1.125rem;
     }
-
-    .brands-section {
-      padding: 40px 15px;
+    
+    .text-sm {
+      font-size: 0.75rem;
     }
-
-    .brands-section h3 {
+    
+    .w-12 {
+      width: 2rem;
+    }
+    
+    .h-1 {
+      height: 2px;
+    }
+    
+    .mb-3 {
+      margin-bottom: 0.5rem;
+    }
+    
+    .mb-2 {
+      margin-bottom: 0.375rem;
+    }
+    
+    .py-16 {
+      padding-top: 2.5rem;
+      padding-bottom: 0.9375rem;
+    }
+    
+    .text-3xl {
       font-size: 1.5rem;
-      margin-bottom: 25px;
     }
-
-    .brand-logo {
-      flex: 0 0 170px;
+    
+    .mb-12 {
+      margin-bottom: 1.5625rem;
+    }
+    
+    .flex-none.w-\[200px\] {
+      width: 170px;
+    }
+    
+    .h-\[100px\] {
       height: 80px;
-      padding: 10px;
     }
-
-    .brand-logo img {
+    
+    .p-5 {
+      padding: 0.625rem;
+    }
+    
+    .max-w-\[180px\] {
       max-width: 120px;
+    }
+    
+    .max-h-\[100px\] {
       max-height: 60px;
     }
-
-    .brands-carousel {
-      width: calc(170px * 15);
-      animation: scroll-brands 25s linear infinite;
+    
+    .animate-scroll-brands {
+      width: calc(170px * 15) !important;
+      animation: scroll-brands-mobile 25s linear infinite;
     }
-
-    @keyframes scroll-brands {
+    
+    @keyframes scroll-brands-mobile {
       0% {
         transform: translateX(0);
       }
