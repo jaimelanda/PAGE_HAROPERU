@@ -199,11 +199,48 @@
 
   @media (max-width: 768px) {
     .fixed:first-child {
+      display: block !important;
+      overflow-x: auto !important;
+      overflow-y: hidden !important;
+      scrollbar-width: none !important;
+      -ms-overflow-style: none !important;
+    }
+    
+    .fixed:first-child::-webkit-scrollbar {
       display: none !important;
+    }
+    
+    .fixed:first-child .max-w-7xl {
+      max-width: none !important;
+      padding: 0 20px !important;
+    }
+    
+    .fixed:first-child .flex.justify-between {
+      white-space: nowrap !important;
+      min-width: max-content !important;
+      gap: 20px !important;
+    }
+    
+    .fixed:first-child .flex.gap-8 {
+      display: flex !important;
+      flex-direction: row !important;
+      gap: 15px !important;
+      flex-wrap: nowrap !important;
+    }
+    
+    .fixed:first-child .flex.gap-4 {
+      display: flex !important;
+      flex-direction: row !important;
+      gap: 8px !important;
+      flex-wrap: nowrap !important;
+    }
+    
+    .fixed:first-child .flex.justify-between {
+      flex-direction: row-reverse !important;
     }
 
     .fixed:last-child {
-      top: 0 !important;
+      top: 44px !important;
     }
 
     .mobile-menu-toggle {
@@ -301,7 +338,7 @@
     }
 
     :global(body) {
-      padding-top: 65px !important;
+      padding-top: 109px !important;
     }
   }
 
