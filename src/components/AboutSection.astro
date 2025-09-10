@@ -16,25 +16,31 @@ import tiendaFisicaHaro from '../assets/images/tienda_fisica_haro.jpg?url';
           <strong class="text-red-600 font-bold">10 años de experiencia</strong> en el mercado peruano y un portafolio de más de 5,000 repuestos disponibles.
         </p>
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-9">
-          <div class="bg-white bg-opacity-90 backdrop-blur-sm border border-red-100 rounded-2xl p-4 lg:p-5 flex flex-col md:flex-row items-center gap-4 text-center md:text-left transition-all duration-300 hover:shadow-lg min-h-[65px]">
-            <i class="fas fa-boxes text-xl lg:text-2xl text-white w-12 h-12 bg-gradient-to-br from-red-600 to-red-800 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-red-600/25 transition-transform duration-300 hover:rotate-[360deg]"></i>
-            <div class="flex-1 min-w-0 w-full">
-              <h4 class="text-gray-900 text-lg font-bold m-0 leading-tight capitalize">Disponibilidad</h4>
+        <div class="grid grid-cols-3 gap-4 my-9">
+          <div class="bg-white bg-opacity-90 backdrop-blur-sm border border-red-100 rounded-2xl p-4 lg:p-5 flex flex-row items-center gap-4 text-left transition-all duration-300 hover:shadow-lg min-h-[65px]">
+            <div class="w-12 h-12 bg-gradient-to-br from-red-600 to-red-800 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-red-600/25 transition-transform duration-300 hover:rotate-[360deg]">
+              <i class="fas fa-boxes text-xl text-white"></i>
+            </div>
+            <div class="flex-1 min-w-0">
+              <h4 class="text-gray-900 text-sm lg:text-base font-bold m-0 leading-tight">Disponibilidad</h4>
             </div>
           </div>
           
-          <div class="bg-white bg-opacity-90 backdrop-blur-sm border border-red-100 rounded-2xl p-4 lg:p-5 flex flex-col md:flex-row items-center gap-4 text-center md:text-left transition-all duration-300 hover:shadow-lg min-h-[65px]">
-            <i class="fas fa-shield-alt text-xl lg:text-2xl text-white w-12 h-12 bg-gradient-to-br from-red-600 to-red-800 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-red-600/25 transition-transform duration-300 hover:rotate-[360deg]"></i>
-            <div class="flex-1 min-w-0 w-full">
-              <h4 class="text-gray-900 text-lg font-bold m-0 leading-tight capitalize">Confiabilidad</h4>
+          <div class="bg-white bg-opacity-90 backdrop-blur-sm border border-red-100 rounded-2xl p-4 lg:p-5 flex flex-row items-center gap-4 text-left transition-all duration-300 hover:shadow-lg min-h-[65px]">
+            <div class="w-12 h-12 bg-gradient-to-br from-red-600 to-red-800 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-red-600/25 transition-transform duration-300 hover:rotate-[360deg]">
+              <i class="fas fa-shield-alt text-xl text-white"></i>
+            </div>
+            <div class="flex-1 min-w-0">
+              <h4 class="text-gray-900 text-sm lg:text-base font-bold m-0 leading-tight">Confiabilidad</h4>
             </div>
           </div>
           
-          <div class="bg-white bg-opacity-90 backdrop-blur-sm border border-red-100 rounded-2xl p-4 lg:p-5 flex flex-col md:flex-row items-center gap-4 text-center md:text-left transition-all duration-300 hover:shadow-lg min-h-[65px]">
-            <i class="fas fa-microchip text-xl lg:text-2xl text-white w-12 h-12 bg-gradient-to-br from-red-600 to-red-800 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-red-600/25 transition-transform duration-300 hover:rotate-[360deg]"></i>
-            <div class="flex-1 min-w-0 w-full">
-              <h4 class="text-gray-900 text-lg font-bold m-0 leading-tight capitalize">Tecnología</h4>
+          <div class="bg-white bg-opacity-90 backdrop-blur-sm border border-red-100 rounded-2xl p-4 lg:p-5 flex flex-row items-center gap-4 text-left transition-all duration-300 hover:shadow-lg min-h-[65px]">
+            <div class="w-12 h-12 bg-gradient-to-br from-red-600 to-red-800 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-red-600/25 transition-transform duration-300 hover:rotate-[360deg]">
+              <i class="fas fa-microchip text-xl text-white"></i>
+            </div>
+            <div class="flex-1 min-w-0">
+              <h4 class="text-gray-900 text-sm lg:text-base font-bold m-0 leading-tight">Tecnología</h4>
             </div>
           </div>
         </div>
@@ -105,22 +111,43 @@ import tiendaFisicaHaro from '../assets/images/tienda_fisica_haro.jpg?url';
     }
     
     .grid-cols-3 > div {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 0.75rem 0.5rem;
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
+      padding: 0.75rem 0.25rem !important;
+      justify-content: center !important;
     }
     
-    .grid-cols-3 > div i {
-      width: 2.25rem;
-      height: 2.25rem;
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
+    .grid-cols-3 > div > div:last-child {
+      width: 100% !important;
+      display: flex !important;
+      justify-content: center !important;
+    }
+    
+    .grid-cols-3 > div > div:first-child {
+      width: 2.25rem !important;
+      height: 2.25rem !important;
+      margin-bottom: 0.5rem !important;
+    }
+    
+    .grid-cols-3 > div > div:first-child i {
+      font-size: 1rem !important;
     }
     
     .grid-cols-3 > div h4 {
-      font-size: 0.9rem;
-      white-space: nowrap;
+      font-size: 0.75rem !important;
+      line-height: 1.1 !important;
+      text-align: center !important;
+      width: 100% !important;
+      white-space: normal !important;
+      word-break: break-word !important;
+      overflow-wrap: break-word !important;
+      hyphens: auto !important;
+      max-height: 2.2rem !important;
+      overflow: hidden !important;
+      display: -webkit-box !important;
+      -webkit-line-clamp: 2 !important;
+      -webkit-box-orient: vertical !important;
     }
     
     /* Mission and vision mobile adjustments */

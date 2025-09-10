@@ -4,7 +4,7 @@ import heroImage2 from '../assets/images/2.png?url';
 import heroImage3 from '../assets/images/3.png?url';
 ---
 
-<section class="relative h-screen overflow-hidden pt-[120px]">
+<section class="relative h-screen overflow-hidden">
   <div class="relative w-full h-full">
     <!-- Slide 1 -->
     <div class="slide active absolute top-0 left-0 w-full h-full opacity-0 transition-opacity duration-700 ease-in-out flex items-center z-10">
@@ -119,10 +119,15 @@ document.addEventListener('DOMContentLoaded', function() {
     transform: scale(1.2) !important;
   }
 
+  .relative.h-screen {
+    height: calc(100vh - 80px) !important;
+    margin-top: 108px !important;
+  }
+
   @media (max-width: 768px) {
     .relative.h-screen {
-      height: 70vh !important;
-      padding-top: 80px !important;
+      height: calc(100vh - 65px) !important;
+      margin-top: 0 !important;
     }
 
     .text-5xl.lg\:text-6xl {
