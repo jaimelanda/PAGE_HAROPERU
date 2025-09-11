@@ -2,44 +2,8 @@
 ---
 
 <header class="header">
-  <!-- Top Info Bar -->
-  <div class="bg-black text-white py-1.5 fixed top-0 left-0 right-0 z-[1002] transition-all duration-300 text-sm">
-    <div class="max-w-7xl mx-auto px-5">
-      <div class="flex justify-between items-center">
-        <div class="flex gap-8">
-          <span class="flex items-center gap-2 text-white">
-            <i class="fas fa-phone text-red-600 w-4"></i>
-            992 767 584
-          </span>
-          <span class="flex items-center gap-2 text-white">
-            <i class="fas fa-envelope text-red-600 w-4"></i>
-            info@haroperu.com
-          </span>
-          <span class="flex items-center gap-2 text-white">
-            <i class="fas fa-clock text-red-600 w-4"></i>
-            Lun - Sáb: 9:00 AM - 6:00 PM
-          </span>
-        </div>
-        <div class="flex gap-4">
-          <a href="https://www.facebook.com/HaroPeru1" target="_blank" title="Facebook" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-red-600 hover:-translate-y-0.5 transition-all duration-300 text-sm">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://www.instagram.com/harodireccionhidraulica/" target="_blank" title="Instagram" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-red-600 hover:-translate-y-0.5 transition-all duration-300 text-sm">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://www.tiktok.com/@haro_direccionhidraulica" target="_blank" title="TikTok" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-red-600 hover:-translate-y-0.5 transition-all duration-300 text-sm">
-            <i class="fab fa-tiktok"></i>
-          </a>
-          <a href="https://wa.me/51992767584" target="_blank" title="WhatsApp" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-red-600 hover:-translate-y-0.5 transition-all duration-300 text-sm">
-            <i class="fab fa-whatsapp"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- Main Header -->
-  <div class="bg-white py-3 shadow-sm fixed top-11 left-0 right-0 z-[1001] transition-all duration-300 border-b border-gray-200">
+  <div class="navbar-main bg-transparent py-3 fixed top-0 left-0 right-0 z-[1001] transition-all duration-500">
     <div class="max-w-7xl mx-auto px-5">
       <div class="flex items-center justify-between gap-10 relative">
         <!-- Logo -->
@@ -52,10 +16,10 @@
         </div>
 
         <!-- Navigation Menu -->
-        <ul class="nav-menu flex list-none m-0 p-0 gap-8 flex-1 justify-center">
-          <li><a href="/" class="flex items-center gap-1 py-4 text-gray-900 font-semibold text-sm hover:text-red-600 transition-colors duration-300">Inicio</a></li>
+        <ul class="nav-menu flex list-none m-0 p-0 gap-8 ml-auto">
+          <li><a href="/" class="flex items-center gap-1 py-4 text-white navbar-link font-semibold text-sm hover:text-red-600 transition-colors duration-300">Inicio</a></li>
           <li class="dropdown relative">
-            <a href="#productos" class="flex items-center gap-1 py-4 text-gray-900 font-semibold text-sm hover:text-red-600 transition-colors duration-300">Productos <i class="fas fa-chevron-down text-xs transition-transform duration-300"></i></a>
+            <a href="#productos" class="flex items-center gap-1 py-4 text-white navbar-link font-semibold text-sm hover:text-red-600 transition-colors duration-300">Productos <i class="fas fa-chevron-down text-xs transition-transform duration-300"></i></a>
             <div class="dropdown-menu absolute top-full left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-2xl min-w-[900px] opacity-0 invisible -translate-y-2 transition-all duration-300 z-[1000]">
               <div class="grid grid-cols-3 gap-6 p-8">
                 <div class="dropdown-column">
@@ -101,9 +65,9 @@
               </div>
             </div>
           </li>
-          <li><a href="#tiendas" class="flex items-center gap-1 py-4 text-gray-900 font-semibold text-sm hover:text-red-600 transition-colors duration-300">Tiendas</a></li>
-          <li><a href="#nosotros" class="flex items-center gap-1 py-4 text-gray-900 font-semibold text-sm hover:text-red-600 transition-colors duration-300">Nosotros</a></li>
-          <li><a href="#footer" class="flex items-center gap-1 py-4 text-gray-900 font-semibold text-sm hover:text-red-600 transition-colors duration-300">Contacto</a></li>
+          <li><a href="#tiendas" class="flex items-center gap-1 py-4 text-white navbar-link font-semibold text-sm hover:text-red-600 transition-colors duration-300">Tiendas</a></li>
+          <li><a href="#nosotros" class="flex items-center gap-1 py-4 text-white navbar-link font-semibold text-sm hover:text-red-600 transition-colors duration-300">Nosotros</a></li>
+          <li><a href="#footer" class="flex items-center gap-1 py-4 text-white navbar-link font-semibold text-sm hover:text-red-600 transition-colors duration-300">Contacto</a></li>
         </ul>
 
         <div class="mobile-menu-toggle hidden flex-col cursor-pointer p-1 gap-0.5 relative ml-4 order-3">
@@ -137,22 +101,23 @@
       }
     });
 
-    // Sticky header on scroll with smooth transitions
-    let lastScroll = 0;
+    // Navbar scroll behavior
     const header = document.querySelector('.header');
+    const navbar = document.querySelector('.navbar-main');
+    const navLinks = document.querySelectorAll('.navbar-link');
     
     window.addEventListener('scroll', function() {
       const currentScroll = window.pageYOffset;
-      const scrollThreshold = 100;
+      const scrollThreshold = 50;
       
-      // Header behavior
+      // Navbar behavior
       if (currentScroll > scrollThreshold) {
+        navbar.classList.add('scrolled');
         header.classList.add('scrolled');
       } else {
+        navbar.classList.remove('scrolled');
         header.classList.remove('scrolled');
       }
-      
-      lastScroll = currentScroll;
     });
   });
 </script>
@@ -180,67 +145,29 @@
     transform: rotate(-45deg) translate(6px, -6px);
   }
 
-  .header.scrolled .fixed {
-    top: 0 !important;
-    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15) !important;
-    background: rgba(255, 255, 255, 0.95) !important;
-    backdrop-filter: blur(10px) !important;
+  /* Navbar scroll effects */
+  .navbar-main.scrolled {
+    background: white !important;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
   }
 
-  .header.scrolled .fixed:first-child {
-    transform: translateY(-100%) !important;
-    opacity: 0 !important;
+  .navbar-main.scrolled .navbar-link {
+    color: rgb(17 24 39) !important;
   }
 
-  /* Body padding to compensate for fixed header */
+  /* No body padding - header overlays content */
   :global(body) {
-    padding-top: 108px;
+    padding-top: 0;
   }
 
   @media (max-width: 768px) {
-    .fixed:first-child {
-      display: block !important;
-      overflow-x: auto !important;
-      overflow-y: hidden !important;
-      scrollbar-width: none !important;
-      -ms-overflow-style: none !important;
-    }
-    
-    .fixed:first-child::-webkit-scrollbar {
-      display: none !important;
-    }
-    
-    .fixed:first-child .max-w-7xl {
-      max-width: none !important;
-      padding: 0 20px !important;
-    }
-    
-    .fixed:first-child .flex.justify-between {
-      white-space: nowrap !important;
-      min-width: max-content !important;
-      gap: 20px !important;
-    }
-    
-    .fixed:first-child .flex.gap-8 {
-      display: flex !important;
-      flex-direction: row !important;
-      gap: 15px !important;
-      flex-wrap: nowrap !important;
-    }
-    
-    .fixed:first-child .flex.gap-4 {
-      display: flex !important;
-      flex-direction: row !important;
-      gap: 8px !important;
-      flex-wrap: nowrap !important;
-    }
-    
-    .fixed:first-child .flex.justify-between {
-      flex-direction: row-reverse !important;
+    .navbar-main {
+      background: transparent !important;
     }
 
-    .fixed:last-child {
-      top: 44px !important;
+    .navbar-main .navbar-link {
+      color: white !important;
     }
 
     .mobile-menu-toggle {
@@ -266,18 +193,15 @@
       max-width: 200px !important;
     }
 
-    .header-actions {
-      display: none !important;
-    }
-
     .mobile-menu-toggle {
-      order: 3 !important;
+      display: flex !important;
       position: absolute !important;
       right: 0 !important;
-      margin-left: 0 !important;
+      top: 50% !important;
+      transform: translateY(-50%) !important;
     }
 
-    /* Mobile navigation */
+    /* Mobile navigation - hidden by default */
     .nav-menu {
       display: flex !important;
       position: absolute !important;
@@ -316,6 +240,7 @@
       display: block !important;
       width: 100% !important;
       font-size: 16px !important;
+      color: rgb(17 24 39) !important;
     }
 
     .nav-menu > li:last-child > a {
@@ -338,29 +263,13 @@
     }
 
     :global(body) {
-      padding-top: 109px !important;
+      padding-top: 0 !important;
     }
   }
 
   @media (max-width: 480px) {
     .max-w-7xl {
       padding: 0 15px !important;
-    }
-
-    .flex.justify-between.items-center {
-      flex-direction: column !important;
-      gap: 10px !important;
-      text-align: center !important;
-    }
-
-    .flex.gap-8 {
-      flex-direction: column !important;
-      gap: 10px !important;
-    }
-
-    .flex.items-center.gap-2 {
-      padding: 10px 12px !important;
-      font-size: 0.8rem !important;
     }
   }
 </style>
