@@ -21,157 +21,163 @@ import dfksLogo from '../assets/images/brands/12_dfks.png?url';
 import geelyLogo from '../assets/images/brands/13_geely.png?url';
 import cherryLogo from '../assets/images/brands/14_cherry.png?url';
 import greatwallLogo from '../assets/images/brands/15_greatwall.png?url';
+import '@fontsource/montserrat/400.css';
+import '@fontsource/montserrat/500.css';
+import '@fontsource/montserrat/600.css';
+import '@fontsource/montserrat/700.css';
 ---
 
-<section class="p-0 bg-gradient-to-br from-gray-50 to-gray-200 relative overflow-hidden" id="productos">
-  <!-- Decorative background gradient -->
-  <div class="absolute inset-0 bg-gradient-radial from-red-600/5 via-transparent to-transparent opacity-60 pointer-events-none"></div>
-  
-  <div class="max-w-none w-full m-0 p-0 relative z-10">
-    <div class="text-center mb-0 py-16 px-5 bg-white/95 backdrop-blur-sm">
-      <span class="text-red-600 font-semibold uppercase tracking-wider text-sm">Nuestros Productos</span>
-      <h2 class="text-4xl text-gray-800 my-4 font-bold">Categorías Especializadas</h2>
-      <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">Encuentra la solución perfecta para tu vehículo en nuestras categorías especializadas de repuestos automotrices.</p>
+<section class="py-20 bg-black" id="productos">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="text-center mb-16">
+      <span class="text-red-500 font-medium uppercase tracking-wide text-sm montserrat">Nuestros Productos</span>
+      <h2 class="text-3xl text-white mt-3 mb-4 font-semibold montserrat">Categorías Especializadas</h2>
+      <p class="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed montserrat font-light">Encuentra la solución perfecta para tu vehículo en nuestras categorías especializadas de repuestos automotrices.</p>
     </div>
     
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 mb-0 w-full">
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 relative h-[340px] hover:z-10 hover:shadow-2xl group m-2">
-        <div class="relative h-full overflow-hidden">
-          <img src={direccionHidraulica} alt="Dirección Hidráulica" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
-          <div class="absolute bottom-0 left-0 right-0 py-3 px-4 bg-white/10 backdrop-blur-md border-t border-white/20">
-            <div class="w-12 h-1 bg-white/80 rounded-full mb-2 transition-all duration-300 group-hover:w-16 group-hover:bg-red-500 drop-shadow-md"></div>
-            <h3 class="text-xl lg:text-2xl font-bold text-center drop-shadow-lg relative overflow-hidden paint-effect">
-              Dirección Hidráulica
-            </h3>
-          </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="group bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-3xl overflow-hidden transition-all duration-500 hover:bg-gray-900/80 hover:border-red-500/50 hover:shadow-2xl hover:shadow-red-500/10">
+        <div class="aspect-[4/3] overflow-hidden relative">
+          <img src={direccionHidraulica} alt="Dirección Hidráulica" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        </div>
+        <div class="p-8">
+          <h3 class="text-xl font-light text-white text-center montserrat tracking-wide">
+            Dirección Hidráulica
+          </h3>
         </div>
       </div>
       
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 relative h-[340px] hover:z-10 hover:shadow-2xl group m-2">
-        <div class="relative h-full overflow-hidden">
-          <img src={direccionAsistida} alt="Dirección Asistida" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
-          <div class="absolute bottom-0 left-0 right-0 py-3 px-4 bg-white/10 backdrop-blur-md border-t border-white/20">
-            <div class="w-12 h-1 bg-white/80 rounded-full mb-2 transition-all duration-300 group-hover:w-16 group-hover:bg-red-500 drop-shadow-md"></div>
-            <h3 class="text-xl lg:text-2xl font-bold text-center drop-shadow-lg relative overflow-hidden paint-effect">
-              Dirección Asistida
-            </h3>
-          </div>
+      <div class="group bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-3xl overflow-hidden transition-all duration-500 hover:bg-gray-900/80 hover:border-red-500/50 hover:shadow-2xl hover:shadow-red-500/10">
+        <div class="aspect-[4/3] overflow-hidden relative">
+          <img src={direccionAsistida} alt="Dirección Asistida" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        </div>
+        <div class="p-8">
+          <h3 class="text-xl font-light text-white text-center montserrat tracking-wide">
+            Dirección Asistida
+          </h3>
         </div>
       </div>
       
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 relative h-[340px] hover:z-10 hover:shadow-2xl group m-2">
-        <div class="relative h-full overflow-hidden">
-          <img src={servosHidraulicos} alt="Servos Hidráulicos" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
-          <div class="absolute bottom-0 left-0 right-0 py-3 px-4 bg-white/10 backdrop-blur-md border-t border-white/20">
-            <div class="w-12 h-1 bg-white/80 rounded-full mb-2 transition-all duration-300 group-hover:w-16 group-hover:bg-red-500 drop-shadow-md"></div>
-            <h3 class="text-xl lg:text-2xl font-bold text-center drop-shadow-lg relative overflow-hidden paint-effect">
-              Servos Hidráulicos
-            </h3>
-          </div>
+      <div class="group bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-3xl overflow-hidden transition-all duration-500 hover:bg-gray-900/80 hover:border-red-500/50 hover:shadow-2xl hover:shadow-red-500/10">
+        <div class="aspect-[4/3] overflow-hidden relative">
+          <img src={servosHidraulicos} alt="Servos Hidráulicos" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        </div>
+        <div class="p-8">
+          <h3 class="text-xl font-light text-white text-center montserrat tracking-wide">
+            Servos Hidráulicos
+          </h3>
         </div>
       </div>
       
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 relative h-[340px] hover:z-10 hover:shadow-2xl group m-2">
-        <div class="relative h-full overflow-hidden">
-          <img src={accesorios} alt="Accesorios" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
-          <div class="absolute bottom-0 left-0 right-0 py-3 px-4 bg-white/10 backdrop-blur-md border-t border-white/20">
-            <div class="w-12 h-1 bg-white/80 rounded-full mb-2 transition-all duration-300 group-hover:w-16 group-hover:bg-red-500 drop-shadow-md"></div>
-            <h3 class="text-xl lg:text-2xl font-bold text-center drop-shadow-lg relative overflow-hidden paint-effect">
-              Accesorios
-            </h3>
-          </div>
+      <div class="group bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-3xl overflow-hidden transition-all duration-500 hover:bg-gray-900/80 hover:border-red-500/50 hover:shadow-2xl hover:shadow-red-500/10">
+        <div class="aspect-[4/3] overflow-hidden relative">
+          <img src={accesorios} alt="Accesorios" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        </div>
+        <div class="p-8">
+          <h3 class="text-xl font-light text-white text-center montserrat tracking-wide">
+            Accesorios
+          </h3>
         </div>
       </div>
       
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 relative h-[340px] hover:z-10 hover:shadow-2xl group m-2">
-        <div class="relative h-full overflow-hidden">
-          <img src={retenes} alt="Retenes" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
-          <div class="absolute bottom-0 left-0 right-0 py-3 px-4 bg-white/10 backdrop-blur-md border-t border-white/20">
-            <div class="w-12 h-1 bg-white/80 rounded-full mb-2 transition-all duration-300 group-hover:w-16 group-hover:bg-red-500 drop-shadow-md"></div>
-            <h3 class="text-xl lg:text-2xl font-bold text-center drop-shadow-lg relative overflow-hidden paint-effect">
-              Retenes
-            </h3>
-          </div>
+      <div class="group bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-3xl overflow-hidden transition-all duration-500 hover:bg-gray-900/80 hover:border-red-500/50 hover:shadow-2xl hover:shadow-red-500/10">
+        <div class="aspect-[4/3] overflow-hidden relative">
+          <img src={retenes} alt="Retenes" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        </div>
+        <div class="p-8">
+          <h3 class="text-xl font-light text-white text-center montserrat tracking-wide">
+            Retenes
+          </h3>
         </div>
       </div>
       
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 relative h-[340px] hover:z-10 hover:shadow-2xl group m-2">
-        <div class="relative h-full overflow-hidden">
-          <img src={accesorios} alt="Fajas" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
-          <div class="absolute bottom-0 left-0 right-0 py-3 px-4 bg-white/10 backdrop-blur-md border-t border-white/20">
-            <div class="w-12 h-1 bg-white/80 rounded-full mb-2 transition-all duration-300 group-hover:w-16 group-hover:bg-red-500 drop-shadow-md"></div>
-            <h3 class="text-xl lg:text-2xl font-bold text-center drop-shadow-lg relative overflow-hidden paint-effect">
-              Fajas
-            </h3>
-          </div>
+      <div class="group bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-3xl overflow-hidden transition-all duration-500 hover:bg-gray-900/80 hover:border-red-500/50 hover:shadow-2xl hover:shadow-red-500/10">
+        <div class="aspect-[4/3] overflow-hidden relative">
+          <img src={accesorios} alt="Fajas" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 group-hover:brightness-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        </div>
+        <div class="p-8">
+          <h3 class="text-xl font-light text-white text-center montserrat tracking-wide">
+            Fajas
+          </h3>
         </div>
       </div>
     </div>
     
-    <div class="text-center py-16 px-5 bg-white/95 border-t border-gray-200 overflow-hidden">
-      <h3 class="text-3xl text-gray-800 mb-12 font-semibold">Repuestos automotrices para todas las marcas</h3>
+  </div>
+</section>
+
+<section class="bg-gradient-to-b from-black via-white/95 to-white">
+  <div class="max-w-6xl mx-auto px-5">
+    <div class="text-center pt-20 pb-16">
+      <h3 class="text-2xl text-gray-900 mb-12 font-light montserrat tracking-wide">Repuestos automotrices para todas las marcas</h3>
       <div class="w-full overflow-hidden relative">
-        <div class="flex animate-scroll-brands hover:pause-animation" style="width: calc(200px * 15);">
-          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
-            <img src={toyotaLogo} alt="Toyota" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
+        <div class="flex animate-scroll-brands hover:pause-animation" style="width: calc(280px * 15);">
+          <div class="flex-none w-[280px] h-[140px] flex items-center justify-center p-1 transition-transform duration-300 hover:scale-105">
+            <img src={toyotaLogo} alt="Toyota" class="max-w-[260px] max-h-[90px] object-contain opacity-70 transition-all duration-300 hover:opacity-100 filter-none" />
           </div>
-          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
-            <img src={nissanLogo} alt="Nissan" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
+          <div class="flex-none w-[280px] h-[140px] flex items-center justify-center p-1 transition-transform duration-300 hover:scale-105">
+            <img src={nissanLogo} alt="Nissan" class="max-w-[260px] max-h-[90px] object-contain opacity-70 transition-all duration-300 hover:opacity-100 filter-none" />
           </div>
-          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
-            <img src={hondaLogo} alt="Honda" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
+          <div class="flex-none w-[280px] h-[140px] flex items-center justify-center p-1 transition-transform duration-300 hover:scale-105">
+            <img src={hondaLogo} alt="Honda" class="max-w-[260px] max-h-[90px] object-contain opacity-70 transition-all duration-300 hover:opacity-100 filter-none" />
           </div>
-          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
-            <img src={fordLogo} alt="Ford" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
+          <div class="flex-none w-[280px] h-[140px] flex items-center justify-center p-1 transition-transform duration-300 hover:scale-105">
+            <img src={fordLogo} alt="Ford" class="max-w-[260px] max-h-[90px] object-contain opacity-70 transition-all duration-300 hover:opacity-100 filter-none" />
           </div>
-          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
-            <img src={chevroletLogo} alt="Chevrolet" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
+          <div class="flex-none w-[280px] h-[140px] flex items-center justify-center p-1 transition-transform duration-300 hover:scale-105">
+            <img src={chevroletLogo} alt="Chevrolet" class="max-w-[260px] max-h-[90px] object-contain opacity-70 transition-all duration-300 hover:opacity-100 filter-none" />
           </div>
-          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
-            <img src={hyundaiLogo} alt="Hyundai" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
+          <div class="flex-none w-[280px] h-[140px] flex items-center justify-center p-1 transition-transform duration-300 hover:scale-105">
+            <img src={hyundaiLogo} alt="Hyundai" class="max-w-[260px] max-h-[90px] object-contain opacity-70 transition-all duration-300 hover:opacity-100 filter-none" />
           </div>
-          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
-            <img src={kiaLogo} alt="Kia" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
+          <div class="flex-none w-[280px] h-[140px] flex items-center justify-center p-1 transition-transform duration-300 hover:scale-105">
+            <img src={kiaLogo} alt="Kia" class="max-w-[260px] max-h-[90px] object-contain opacity-70 transition-all duration-300 hover:opacity-100 filter-none" />
           </div>
-          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
-            <img src={mazdaLogo} alt="Mazda" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
+          <div class="flex-none w-[280px] h-[140px] flex items-center justify-center p-1 transition-transform duration-300 hover:scale-105">
+            <img src={mazdaLogo} alt="Mazda" class="max-w-[260px] max-h-[90px] object-contain opacity-70 transition-all duration-300 hover:opacity-100 filter-none" />
           </div>
-          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
-            <img src={suzukiLogo} alt="Suzuki" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
+          <div class="flex-none w-[280px] h-[140px] flex items-center justify-center p-1 transition-transform duration-300 hover:scale-105">
+            <img src={suzukiLogo} alt="Suzuki" class="max-w-[260px] max-h-[90px] object-contain opacity-70 transition-all duration-300 hover:opacity-100 filter-none" />
           </div>
-          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
-            <img src={mitsubishiLogo} alt="Mitsubishi" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
+          <div class="flex-none w-[280px] h-[140px] flex items-center justify-center p-1 transition-transform duration-300 hover:scale-105">
+            <img src={mitsubishiLogo} alt="Mitsubishi" class="max-w-[260px] max-h-[90px] object-contain opacity-70 transition-all duration-300 hover:opacity-100 filter-none" />
           </div>
-          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
-            <img src={changanLogo} alt="Changan" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
+          <div class="flex-none w-[280px] h-[140px] flex items-center justify-center p-1 transition-transform duration-300 hover:scale-105">
+            <img src={changanLogo} alt="Changan" class="max-w-[260px] max-h-[90px] object-contain opacity-70 transition-all duration-300 hover:opacity-100 filter-none" />
           </div>
-          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
-            <img src={dfksLogo} alt="DFKS" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
+          <div class="flex-none w-[280px] h-[140px] flex items-center justify-center p-1 transition-transform duration-300 hover:scale-105">
+            <img src={dfksLogo} alt="DFKS" class="max-w-[260px] max-h-[90px] object-contain opacity-70 transition-all duration-300 hover:opacity-100 filter-none" />
           </div>
-          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
-            <img src={geelyLogo} alt="Geely" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
+          <div class="flex-none w-[280px] h-[140px] flex items-center justify-center p-1 transition-transform duration-300 hover:scale-105">
+            <img src={geelyLogo} alt="Geely" class="max-w-[260px] max-h-[90px] object-contain opacity-70 transition-all duration-300 hover:opacity-100 filter-none" />
           </div>
-          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
-            <img src={cherryLogo} alt="Cherry" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
+          <div class="flex-none w-[280px] h-[140px] flex items-center justify-center p-1 transition-transform duration-300 hover:scale-105">
+            <img src={cherryLogo} alt="Cherry" class="max-w-[260px] max-h-[90px] object-contain opacity-70 transition-all duration-300 hover:opacity-100 filter-none" />
           </div>
-          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
-            <img src={greatwallLogo} alt="Great Wall" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
+          <div class="flex-none w-[280px] h-[140px] flex items-center justify-center p-1 transition-transform duration-300 hover:scale-105">
+            <img src={greatwallLogo} alt="Great Wall" class="max-w-[260px] max-h-[90px] object-contain opacity-70 transition-all duration-300 hover:opacity-100 filter-none" />
           </div>
           <!-- Duplicate logos for seamless loop -->
-          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
-            <img src={toyotaLogo} alt="Toyota" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
+          <div class="flex-none w-[280px] h-[140px] flex items-center justify-center p-1 transition-transform duration-300 hover:scale-105">
+            <img src={toyotaLogo} alt="Toyota" class="max-w-[260px] max-h-[90px] object-contain opacity-70 transition-all duration-300 hover:opacity-100 filter-none" />
           </div>
-          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
-            <img src={nissanLogo} alt="Nissan" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
+          <div class="flex-none w-[280px] h-[140px] flex items-center justify-center p-1 transition-transform duration-300 hover:scale-105">
+            <img src={nissanLogo} alt="Nissan" class="max-w-[260px] max-h-[90px] object-contain opacity-70 transition-all duration-300 hover:opacity-100 filter-none" />
           </div>
-          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
-            <img src={hondaLogo} alt="Honda" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
+          <div class="flex-none w-[280px] h-[140px] flex items-center justify-center p-1 transition-transform duration-300 hover:scale-105">
+            <img src={hondaLogo} alt="Honda" class="max-w-[260px] max-h-[90px] object-contain opacity-70 transition-all duration-300 hover:opacity-100 filter-none" />
           </div>
-          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
-            <img src={fordLogo} alt="Ford" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
+          <div class="flex-none w-[280px] h-[140px] flex items-center justify-center p-1 transition-transform duration-300 hover:scale-105">
+            <img src={fordLogo} alt="Ford" class="max-w-[260px] max-h-[90px] object-contain opacity-70 transition-all duration-300 hover:opacity-100 filter-none" />
           </div>
-          <div class="flex-none w-[200px] h-[100px] flex items-center justify-center p-5 transition-transform duration-300 hover:scale-110">
-            <img src={chevroletLogo} alt="Chevrolet" class="max-w-[180px] max-h-[100px] object-contain transition-all duration-300 hover:scale-105" />
+          <div class="flex-none w-[280px] h-[140px] flex items-center justify-center p-1 transition-transform duration-300 hover:scale-105">
+            <img src={chevroletLogo} alt="Chevrolet" class="max-w-[260px] max-h-[90px] object-contain opacity-70 transition-all duration-300 hover:opacity-100 filter-none" />
           </div>
         </div>
       </div>
@@ -210,13 +216,28 @@ import greatwallLogo from '../assets/images/brands/15_greatwall.png?url';
 </script>
 
 <style>
+  .montserrat {
+    font-family: 'Montserrat', sans-serif !important;
+  }
+
+  /* Improve image rendering quality */
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    image-rendering: optimize-contrast;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
   /* Custom brand carousel animation */
   @keyframes scroll-brands {
     0% {
       transform: translateX(0);
     }
     100% {
-      transform: translateX(calc(-200px * 10));
+      transform: translateX(calc(-280px * 10));
     }
   }
   
@@ -228,238 +249,59 @@ import greatwallLogo from '../assets/images/brands/15_greatwall.png?url';
     animation-play-state: paused;
   }
   
-  /* Custom radial gradient for background */
-  .bg-gradient-radial {
-    background: radial-gradient(circle at 20% 30%, var(--tw-gradient-stops));
-  }
-  
-  /* Card hover effects */
-  .group:hover .w-12 {
-    width: 4rem;
-  }
-  
-  /* Paint brush effect for titles - only text */
-  .paint-effect {
-    background: linear-gradient(90deg, white 0%, white 50%, #ef4444 50%, #ef4444 100%);
-    background-size: 200% 100%;
-    background-position: 0% 0%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: background-position 0.8s ease-in-out;
-  }
-  
-  /* Hover effect: paint from left to right with red */
-  .group:hover .paint-effect {
-    background-position: 100% 0%;
-  }
-  
-  /* Mobile scroll effect - when card is visible */
   @media (max-width: 768px) {
-    .paint-effect {
-      transition: background-position 1s ease-in-out calc(0.3s + var(--delay, 0s));
-    }
-    
-    .w-12 {
-      transition: width 0.6s ease-in-out calc(0.5s + var(--delay, 0s));
-    }
-    
-    .group.in-view .paint-effect {
-      background-position: 100% 0%;
-    }
-    
-    .group.in-view .w-12 {
-      width: 4rem;
-    }
-  }
-  
-  /* Responsive adjustments for modern cards */
-  @media (max-width: 1024px) and (min-width: 769px) {
-    .md\:grid-cols-2 {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .h-\[320px\] {
-      height: 300px;
-    }
-    
-    .text-xl {
-      font-size: 1.125rem;
-    }
-    
-    .lg\:text-2xl {
-      font-size: 1.5rem;
-    }
-  }
-  
-  @media (max-width: 768px) and (min-width: 481px) {
-    .py-16 {
-      padding-top: 2.5rem;
-      padding-bottom: 1.25rem;
-    }
-    
-    .text-4xl {
-      font-size: 2rem;
-    }
-    
-    .md\:grid-cols-2 {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .h-\[320px\] {
-      height: 280px;
-    }
-    
-    .m-2 {
-      margin: 0.25rem;
-    }
-    
-    .p-6 {
-      padding: 1rem;
-    }
-    
-    .text-xl {
-      font-size: 1rem;
-    }
-    
-    .lg\:text-2xl {
-      font-size: 1.25rem;
+    .grid {
+      gap: 1rem;
     }
     
     .text-3xl {
-      font-size: 1.6rem;
+      font-size: 1.75rem;
     }
     
-    .mb-12 {
-      margin-bottom: 1.875rem;
+    .text-2xl {
+      font-size: 1.5rem;
     }
     
-    .flex-none.w-\[200px\] {
-      width: 160px;
+    .animate-scroll-brands {
+      width: calc(240px * 15) !important;
     }
     
-    .h-\[100px\] {
-      height: 80px;
+    .flex-none {
+      width: 240px !important;
+      height: 120px !important;
     }
     
-    .p-5 {
-      padding: 0.5rem;
-    }
-    
-    .max-w-\[180px\] {
-      max-width: 140px;
-    }
-    
-    .max-h-\[100px\] {
-      max-height: 70px;
+    .flex-none img {
+      max-width: 220px !important;
+      max-height: 80px !important;
     }
   }
   
   @media (max-width: 480px) {
-    .py-16 {
-      padding-top: 1.875rem;
-      padding-bottom: 1.25rem;
-    }
-    
-    .text-4xl {
-      font-size: 1.8rem;
-    }
-    
-    .text-xl {
-      font-size: 1rem;
-    }
-    
     .lg\:grid-cols-3 {
       grid-template-columns: 1fr;
-      width: 100vw;
-      margin-left: calc(-50vw + 50%);
-    }
-    
-    .h-\[320px\] {
-      height: 280px;
-    }
-    
-    .m-2 {
-      margin: 0.125rem;
-    }
-    
-    .p-6 {
-      padding: 0.875rem;
-    }
-    
-    .text-xl {
-      font-size: 0.95rem;
-    }
-    
-    .lg\:text-2xl {
-      font-size: 1.125rem;
-    }
-    
-    .text-sm {
-      font-size: 0.75rem;
-    }
-    
-    .w-12 {
-      width: 2rem;
-    }
-    
-    .h-1 {
-      height: 2px;
-    }
-    
-    .mb-3 {
-      margin-bottom: 0.5rem;
-    }
-    
-    .mb-2 {
-      margin-bottom: 0.375rem;
-    }
-    
-    .py-16 {
-      padding-top: 2.5rem;
-      padding-bottom: 0.9375rem;
     }
     
     .text-3xl {
       font-size: 1.5rem;
     }
     
-    .mb-12 {
-      margin-bottom: 1.5625rem;
-    }
-    
-    .flex-none.w-\[200px\] {
-      width: 150px;
-    }
-    
-    .h-\[100px\] {
-      height: 80px;
-    }
-    
-    .p-5 {
-      padding: 0.375rem;
-    }
-    
-    .max-w-\[180px\] {
-      max-width: 168px;
-    }
-    
-    .max-h-\[100px\] {
-      max-height: 84px;
+    .text-2xl {
+      font-size: 1.25rem;
     }
     
     .animate-scroll-brands {
-      width: calc(150px * 15) !important;
-      animation: scroll-brands-mobile 25s linear infinite;
+      width: calc(200px * 15) !important;
     }
     
-    @keyframes scroll-brands-mobile {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(calc(-150px * 10));
-      }
+    .flex-none {
+      width: 200px !important;
+      height: 110px !important;
+    }
+    
+    .flex-none img {
+      max-width: 180px !important;
+      max-height: 60px !important;
     }
   }
 </style>

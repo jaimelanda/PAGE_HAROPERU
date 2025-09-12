@@ -1,6 +1,10 @@
 ---
 import tienda160 from '../assets/images/tienda_160.jpg?url';
 import tienda440 from '../assets/images/tienda_440.jpg?url';
+import '@fontsource/montserrat/400.css';
+import '@fontsource/montserrat/500.css';
+import '@fontsource/montserrat/600.css';
+import '@fontsource/montserrat/700.css';
 
 const stores = [
   {
@@ -35,7 +39,7 @@ const stores = [
 
 <section id="tiendas" class="py-16 bg-gray-50">
   <div class="max-w-6xl mx-auto px-4">
-    <h2 class="text-center text-4xl text-slate-700 mb-12 font-bold">Nuestras Tiendas</h2>
+    <h2 class="text-center text-4xl text-slate-700 mb-12 font-bold montserrat">Nuestras Tiendas</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {stores.map((store, index) => (
         <div class="relative rounded-xl overflow-hidden shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-black/25 group" key={index}>
@@ -54,9 +58,9 @@ const stores = [
             
             <!-- Content over image -->
             <div class="absolute bottom-0 left-0 right-0 p-6 text-white z-10">
-              <h3 class="text-xl font-bold mb-2 drop-shadow-lg">{store.name}</h3>
-              <p class="text-white/90 mb-4 leading-relaxed drop-shadow">{store.address}</p>
-              <a href={store.locationUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-white/30 hover:scale-105 border border-white/20">
+              <h3 class="text-xl font-bold mb-2 drop-shadow-lg montserrat">{store.name}</h3>
+              <p class="text-white/90 mb-4 leading-relaxed drop-shadow montserrat">{store.address}</p>
+              <a href={store.locationUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-white/30 hover:scale-105 border border-white/20 montserrat">
                 📍 Ver ubicación
               </a>
             </div>
@@ -78,6 +82,10 @@ const stores = [
 
 <!-- Carousel active dot styling -->
 <style>
+  .montserrat {
+    font-family: 'Montserrat', sans-serif !important;
+  }
+
   .carousel-dot.active {
     background: white !important;
   }

@@ -1,4 +1,8 @@
 ---
+import '@fontsource/montserrat/400.css';
+import '@fontsource/montserrat/500.css';
+import '@fontsource/montserrat/600.css';
+import '@fontsource/montserrat/700.css';
 ---
 
 <header class="header">
@@ -10,7 +14,7 @@
         <div class="flex-shrink-0">
           <a href="/" class="flex items-center gap-4 hover:-translate-y-0.5 transition-all duration-300">
             <div class="flex items-center">
-              <img src="/images/logo.png" alt="HARO PERÚ PACÍFICO" class="h-12 w-auto max-w-full transition-all duration-300 hover:scale-105">
+              <img src="/images/logo.png" alt="HARO PERÚ PACÍFICO" class="h-12 w-auto max-w-full transition-all duration-300 hover:scale-105 brightness-0 invert">
             </div>
           </a>
         </div>
@@ -71,9 +75,8 @@
         </ul>
 
         <div class="mobile-menu-toggle hidden flex-col cursor-pointer p-1 gap-0.5 relative ml-4 order-3">
-          <span class="w-6 h-0.5 bg-red-600 transition-all duration-300"></span>
-          <span class="w-6 h-0.5 bg-red-600 transition-all duration-300"></span>
-          <span class="w-6 h-0.5 bg-red-600 transition-all duration-300"></span>
+          <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
+          <span class="w-6 h-0.5 bg-white transition-all duration-300"></span>
         </div>
       </div>
     </div>
@@ -123,6 +126,13 @@
 </script>
 
 <style>
+  /* Apply Montserrat font to navbar elements */
+  .navbar-link,
+  .dropdown-menu h4,
+  .dropdown-menu a {
+    font-family: 'Montserrat', sans-serif !important;
+  }
+
   .dropdown:hover .dropdown-menu {
     opacity: 1 !important;
     visibility: visible !important;
@@ -134,15 +144,11 @@
   }
 
   .mobile-menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
+    transform: rotate(45deg) translate(3px, 3px);
   }
 
   .mobile-menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .mobile-menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
+    transform: rotate(-45deg) translate(3px, -3px);
   }
 
   /* Navbar scroll effects */
@@ -154,6 +160,14 @@
 
   .navbar-main.scrolled .navbar-link {
     color: rgb(17 24 39) !important;
+  }
+
+  .navbar-main.scrolled img {
+    filter: none !important;
+  }
+
+  .navbar-main.scrolled .mobile-menu-toggle span {
+    background-color: rgb(220 38 38) !important;
   }
 
   /* No body padding - header overlays content */

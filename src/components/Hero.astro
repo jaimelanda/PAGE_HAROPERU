@@ -2,51 +2,59 @@
 import heroImage1 from '../assets/images/1.png?url';
 import heroImage2 from '../assets/images/2.png?url';
 import heroImage3 from '../assets/images/3.png?url';
+import '@fontsource/montserrat/400.css';
+import '@fontsource/montserrat/500.css';
+import '@fontsource/montserrat/600.css';
+import '@fontsource/montserrat/700.css';
 ---
 
 <section class="relative h-screen overflow-hidden z-[999]">
   <div class="relative w-full h-full">
     <!-- Slide 1 -->
-    <div class="slide active absolute top-0 left-0 w-full h-full opacity-0 transition-all duration-1200 ease-out flex items-center z-10">
+    <div class="slide active absolute top-0 left-0 w-full h-full opacity-0 flex items-center z-10">
       <div class="absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat" style={`background-image: url(${heroImage1})`}>
       </div>
-      <div class="absolute top-0 left-0 w-full h-full bg-black/50 z-[5]"></div>
-      <div class="relative z-10 w-full flex items-center justify-center" style="margin-top: -210px;">
+      <div class="absolute top-0 left-0 w-full h-full bg-black/40"></div>
+      <div class="relative z-[25] w-full flex items-center justify-center" style="margin-top: -210px;">
         <div class="text-center max-w-4xl px-5">
-          <h1 class="text-white text-5xl lg:text-6xl font-bold leading-tight mb-6 uppercase">Bienvenidos a HARO</h1>
-          <p class="text-white text-lg leading-relaxed opacity-95 max-w-2xl mx-auto">Expertos en repuestos de cremalleras hidráulicas. Una década de trayectoria ofreciendo calidad y confianza al mercado peruano.</p>
+          <h1 class="text-white text-4xl lg:text-5xl font-semibold leading-tight mb-6 uppercase tracking-widest hero-title">DIRECCIÓN HIDRÁULICA PREMIUM</h1>
+          <p class="text-white text-lg leading-relaxed max-w-2xl mx-auto hero-text">Líderes en repuestos de cremalleras hidráulicas con más de una década de experiencia en el mercado peruano.</p>
         </div>
       </div>
     </div>
 
     <!-- Slide 2 -->
-    <div class="slide absolute top-0 left-0 w-full h-full opacity-0 transition-all duration-1200 ease-out flex items-center z-10">
+    <div class="slide absolute top-0 left-0 w-full h-full opacity-0 flex items-center z-10">
       <div class="absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat" style={`background-image: url(${heroImage2})`}>
       </div>
-      <div class="absolute top-0 left-0 w-full h-full bg-black/50 z-[5]"></div>
-      <div class="relative z-10 w-full flex items-center justify-center" style="margin-top: -210px;">
+      <div class="absolute top-0 left-0 w-full h-full bg-black/40"></div>
+      <div class="relative z-[25] w-full flex items-center justify-center" style="margin-top: -210px;">
         <div class="text-center max-w-4xl px-5">
-          <h1 class="text-white text-5xl lg:text-6xl font-bold leading-tight mb-6 uppercase">Servos Hidráulicos</h1>
-          <p class="text-white text-lg leading-relaxed opacity-95 max-w-2xl mx-auto">Especialistas en repuestos de servos hidráulicos con más de una década de experiencia. Calidad garantizada para el mercado peruano.</p>
+          <h1 class="text-white text-4xl lg:text-5xl font-semibold leading-tight mb-6 uppercase tracking-widest hero-title">SERVOS HIDRÁULICOS DE ALTA PRECISIÓN</h1>
+          <p class="text-white text-lg leading-relaxed max-w-2xl mx-auto hero-text">Expertos certificados en servos hidráulicos de última generación con tecnología europea y americana.</p>
         </div>
       </div>
     </div>
 
     <!-- Slide 3 -->
-    <div class="slide absolute top-0 left-0 w-full h-full opacity-0 transition-all duration-1200 ease-out flex items-center z-10">
+    <div class="slide absolute top-0 left-0 w-full h-full opacity-0 flex items-center z-10">
       <div class="absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat" style={`background-image: url(${heroImage3})`}>
       </div>
-      <div class="absolute top-0 left-0 w-full h-full bg-black/50 z-[5]"></div>
-      <div class="relative z-10 w-full flex items-center justify-center" style="margin-top: -210px;">
+      <div class="absolute top-0 left-0 w-full h-full bg-black/40"></div>
+      <div class="relative z-[25] w-full flex items-center justify-center" style="margin-top: -210px;">
         <div class="text-center max-w-4xl px-5">
-          <h1 class="text-white text-5xl lg:text-6xl font-bold leading-tight mb-6 uppercase">ATENCIÓN PERSONALIZADA</h1>
-          <p class="text-white text-lg leading-relaxed opacity-95 max-w-2xl mx-auto">En HARO, cada cliente recibe asesoría especializada y soluciones a medida en repuestos de dirección hidráulica. Calidad y confianza garantizadas.</p>
+          <h1 class="text-white text-4xl lg:text-5xl font-semibold leading-tight mb-6 uppercase tracking-widest hero-title">SERVICIO TÉCNICO ESPECIALIZADO</h1>
+          <p class="text-white text-lg leading-relaxed max-w-2xl mx-auto hero-text">En HARO brindamos asesoría técnica profesional, diagnósticos computarizados y mantenimiento preventivo especializado.</p>
         </div>
       </div>
     </div>
 
-  <!-- Permanent bottom gradient -->
-  <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black via-black/80 to-transparent z-20"></div>
+  <!-- Permanent overlay and gradients -->
+  <div class="absolute top-0 left-0 w-full h-full bg-black/50 z-[5]"></div>
+  <!-- Text background gradient - covers entire hero -->
+  <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/30 via-black/20 to-transparent z-[12]"></div>
+  <!-- Main fusion gradient - covers entire image with intensity at bottom -->
+  <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black via-black via-gray-900 via-transparent via-transparent to-transparent z-[15]"></div>
 
   <!-- Navigation dots -->
   <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-4 z-30">
@@ -63,18 +71,22 @@ document.addEventListener('DOMContentLoaded', function() {
   const dots = document.querySelectorAll('.nav-dot');
 
   function showSlide(n) {
-    // Remove active class from all slides and dots
-    slides.forEach((slide, index) => {
-      slide.classList.remove('active');
-      slide.style.zIndex = '1'; // Reset z-index
-    });
-    dots.forEach(dot => dot.classList.remove('active'));
-    
     slideIndex = (n + slides.length) % slides.length;
     
-    // Add active class to current slide and dot
+    // Hide all slides instantly
+    slides.forEach((slide, index) => {
+      slide.classList.remove('active');
+      slide.style.zIndex = '1';
+      slide.style.opacity = '0';
+    });
+    
+    // Show new slide instantly and bring to front
+    slides[slideIndex].style.zIndex = '15';
+    slides[slideIndex].style.opacity = '1';
     slides[slideIndex].classList.add('active');
-    slides[slideIndex].style.zIndex = '10'; // Bring active slide to front
+    
+    // Update dots
+    dots.forEach(dot => dot.classList.remove('active'));
     dots[slideIndex].classList.add('active');
   }
 
@@ -85,10 +97,10 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initialize first slide
   showSlide(0);
 
-  // Auto slide with smoother timing
+  // Auto slide with imperceptible timing
   setInterval(() => {
     showSlide(slideIndex + 1);
-  }, 6000);
+  }, 7000);
 
   // Make currentSlide globally available
   window.currentSlide = currentSlide;
@@ -98,6 +110,16 @@ document.addEventListener('DOMContentLoaded', function() {
 <style>
   .slide.active {
     opacity: 1 !important;
+  }
+
+  /* Hero text styles - above overlay */
+  .hero-title,
+  .hero-text {
+    color: white !important;
+    position: relative !important;
+    z-index: 25 !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 600 !important;
   }
 
   .nav-dot.active {
