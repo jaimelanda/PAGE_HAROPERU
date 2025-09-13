@@ -1,0 +1,37 @@
+---
+export interface Props {
+  thickHeight?: string;
+  thinHeight?: string;
+  thickTop?: string;
+  className?: string;
+}
+
+const { 
+  thickHeight = "h-24", 
+  thinHeight = "200px", 
+  thickTop = "top-4",
+  className = ""
+} = Astro.props;
+---
+
+<div class={`flex-shrink-0 relative ${className}`}>
+  <!-- Línea principal gruesa -->
+  <div class={`absolute ${thickTop} w-1 ${thickHeight} bg-black rounded-full`}></div>
+  <!-- Línea delgada pegada a la derecha -->
+  <div class="linea-delgada absolute top-0 -right-0.5 w-0.5 bg-black opacity-30 rounded-full" style={`height: ${thinHeight};`}></div>
+</div>
+
+<style>
+  /* Ajuste de altura de línea delgada para móvil */
+  @media (max-width: 768px) {
+    .linea-delgada {
+      height: 280px !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .linea-delgada {
+      height: 320px !important;
+    }
+  }
+</style>

@@ -1,6 +1,4 @@
 ---
-import tienda160 from '../assets/images/tienda_160.jpg?url';
-import tienda440 from '../assets/images/tienda_440.jpg?url';
 import '@fontsource/montserrat/400.css';
 import '@fontsource/montserrat/500.css';
 import '@fontsource/montserrat/600.css';
@@ -10,109 +8,120 @@ const stores = [
   {
     name: "Tienda Independencia 1",
     address: "Calle Las Prensas 160, Independencia, Lima",
-    locationUrl: "https://maps.google.com/?q=Calle+Las+Prensas+160+Independencia+Lima+Peru",
-    images: [
-      tienda160,
-      tienda440
-    ]
+    locationUrl: "https://maps.google.com/?q=Calle+Las+Prensas+160+Independencia+Lima+Peru"
   },
   {
-    name: "Tienda Independencia 2", 
+    name: "Tienda Independencia 2",
     address: "Calle Las Prensas 440, Independencia, Lima",
-    locationUrl: "https://maps.google.com/?q=Calle+Las+Prensas+440+Independencia+Lima+Peru",
-    images: [
-      tienda440,
-      tienda160
-    ]
+    locationUrl: "https://maps.google.com/?q=Calle+Las+Prensas+440+Independencia+Lima+Peru"
   },
   {
     name: "Tienda Arequipa",
-    address: "Calle 22 de Agosto, Arequipa", 
-    locationUrl: "https://maps.google.com/?q=Calle+22+de+Agosto+Arequipa+Peru",
-    images: [
-      tienda160,
-      tienda440
-    ]
+    address: "Calle 22 de Agosto, Arequipa",
+    locationUrl: "https://maps.google.com/?q=Calle+22+de+Agosto+Arequipa+Peru"
   }
 ];
 ---
 
-<section id="tiendas" class="py-16 bg-gray-50">
-  <div class="max-w-6xl mx-auto px-4">
-    <h2 class="text-center text-4xl text-slate-700 mb-12 font-bold montserrat">Nuestras Tiendas</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<section id="tiendas" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Header minimalista -->
+    <div class="text-center mb-20">
+      <div class="inline-flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-full mb-8">
+        <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+        <span class="text-gray-600 font-medium uppercase tracking-wide text-sm montserrat">Ubicaciones</span>
+      </div>
+      <h2 class="text-5xl text-gray-900 mb-6 font-light montserrat">Nuestras Tiendas</h2>
+      <p class="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed montserrat">Encuentra la ubicación más cercana a ti</p>
+    </div>
+
+    <!-- Tiendas en fila horizontal -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
       {stores.map((store, index) => (
-        <div class="relative rounded-xl overflow-hidden shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-black/25 group" key={index}>
-          <!-- Full card image background -->
-          <div class="relative h-[540px] md:h-[448px] overflow-hidden">
-            <div class="flex transition-transform duration-500 h-full" id={`carousel-${index}`}>
-              {store.images.map((image, imgIndex) => (
-                <div class="min-w-full h-full flex-shrink-0" key={imgIndex}>
-                  <img src={image} alt={`${store.name} - Foto ${imgIndex + 1}`} class="w-full h-full object-cover block transition-transform duration-300 group-hover:scale-105" />
-                </div>
-              ))}
+        <div class="group relative" key={index}>
+          <div class="relative p-8 transition-all duration-300 hover:bg-gray-50/50 rounded-2xl">
+
+            <!-- Número de tienda -->
+            <div class="flex items-center justify-center w-12 h-12 bg-white border border-gray-200 rounded-full text-gray-400 font-medium montserrat group-hover:border-red-500 group-hover:text-red-500 transition-all duration-300 mb-6">
+              {String(index + 1).padStart(2, '0')}
             </div>
-            
-            <!-- Gradient overlay for text -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
-            
-            <!-- Content over image -->
-            <div class="absolute bottom-0 left-0 right-0 p-6 text-white z-10">
-              <h3 class="text-xl font-bold mb-2 drop-shadow-lg montserrat">{store.name}</h3>
-              <p class="text-white/90 mb-4 leading-relaxed drop-shadow montserrat">{store.address}</p>
-              <a href={store.locationUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full font-medium transition-all duration-300 hover:bg-white/30 hover:scale-105 border border-white/20 montserrat">
-                📍 Ver ubicación
+
+            <!-- Información de la tienda -->
+            <div class="space-y-4 mb-6">
+              <h3 class="text-xl font-light text-gray-900 montserrat group-hover:text-red-900 transition-colors duration-300">
+                {store.name}
+              </h3>
+              <p class="text-gray-500 leading-relaxed montserrat text-sm">
+                {store.address}
+              </p>
+            </div>
+
+            <!-- Placeholder para mapa -->
+            <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl h-40 flex items-center justify-center border border-gray-200 group-hover:border-red-200 transition-all duration-300 mb-6">
+              <div class="text-center">
+                <div class="w-8 h-8 bg-gray-300 rounded-full mb-2 mx-auto group-hover:bg-red-300 transition-colors duration-300"></div>
+                <span class="text-xs text-gray-400 montserrat">Mapa interactivo</span>
+              </div>
+            </div>
+
+            <!-- Botón de acción -->
+            <div class="text-center">
+              <a
+                href={store.locationUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center w-12 h-12 bg-white border border-gray-200 rounded-full text-gray-400 hover:border-red-500 hover:text-red-500 hover:bg-red-50 transition-all duration-300 montserrat"
+              >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
               </a>
             </div>
-            
-            <!-- Carousel controls -->
-            <button class="absolute top-1/2 -translate-y-1/2 left-2.5 bg-black/60 text-white border-none w-10 h-10 rounded-full text-xl cursor-pointer transition-colors duration-300 hover:bg-black/80 z-20 carousel-btn carousel-prev" data-carousel={`carousel-${index}`}>&#8249;</button>
-            <button class="absolute top-1/2 -translate-y-1/2 right-2.5 bg-black/60 text-white border-none w-10 h-10 rounded-full text-xl cursor-pointer transition-colors duration-300 hover:bg-black/80 z-20 carousel-btn carousel-next" data-carousel={`carousel-${index}`}>&#8250;</button>
-            <div class="absolute top-4 left-1/2 -translate-x-1/2 flex gap-2 z-20 carousel-dots">
-              {store.images.map((_, imgIndex) => (
-                <button class="w-2.5 h-2.5 rounded-full border-none bg-white/50 cursor-pointer transition-all duration-300 carousel-dot hover:bg-white/80" data-carousel={`carousel-${index}`} data-slide={imgIndex} key={imgIndex}></button>
-              ))}
-            </div>
+
+            <!-- Indicador lateral sutil -->
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-transparent group-hover:bg-gradient-to-b group-hover:from-red-500 group-hover:to-red-600 transition-all duration-500 rounded-r-full"></div>
           </div>
         </div>
       ))}
     </div>
+
+    <!-- Información adicional -->
+    <div class="mt-20 text-center">
+      <div class="inline-flex items-center gap-2 px-6 py-3 bg-gray-50 rounded-full">
+        <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+        <span class="text-gray-600 text-sm montserrat">Todas las tiendas están operativas</span>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- Carousel active dot styling -->
 <style>
   .montserrat {
     font-family: 'Montserrat', sans-serif !important;
   }
 
-  .carousel-dot.active {
-    background: white !important;
-  }
-  
   /* Mobile responsive adjustments */
   @media (max-width: 768px) {
     .grid-cols-1 {
       gap: 1.5rem;
     }
-    
+
     .text-4xl {
       font-size: 2rem;
     }
-    
+
     .mb-12 {
       margin-bottom: 2rem;
     }
-    
-    .h-64 {
-      height: 12.5rem; /* 200px */
-    }
-    
+
     .p-6 {
       padding: 1rem;
     }
   }
-  
+
   @media (max-width: 1024px) and (min-width: 769px) {
     .lg\\:grid-cols-3 {
       grid-template-columns: repeat(2, 1fr);
@@ -120,52 +129,3 @@ const stores = [
   }
 </style>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Get all carousel containers
-    document.querySelectorAll('[id^="carousel-"]').forEach((carousel, carouselIndex) => {
-      const prevBtn = document.querySelector(`[data-carousel="carousel-${carouselIndex}"].carousel-prev`);
-      const nextBtn = document.querySelector(`[data-carousel="carousel-${carouselIndex}"].carousel-next`);
-      const dots = document.querySelectorAll(`[data-carousel="carousel-${carouselIndex}"].carousel-dot`);
-      const slides = carousel.children;
-      
-      let currentSlide = 0;
-      
-      function updateCarousel() {
-        const translateX = -currentSlide * 100;
-        carousel.style.transform = `translateX(${translateX}%)`;
-        
-        dots.forEach((dot, index) => {
-          dot.classList.toggle('active', index === currentSlide);
-        });
-      }
-      
-      function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        updateCarousel();
-      }
-      
-      function prevSlide() {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        updateCarousel();
-      }
-      
-      function goToSlide(slideIndex) {
-        currentSlide = slideIndex;
-        updateCarousel();
-      }
-      
-      prevBtn?.addEventListener('click', prevSlide);
-      nextBtn?.addEventListener('click', nextSlide);
-      
-      dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => goToSlide(index));
-      });
-      
-      updateCarousel();
-      
-      // Auto-rotate every 4 seconds
-      setInterval(nextSlide, 4000);
-    });
-  });
-</script>
