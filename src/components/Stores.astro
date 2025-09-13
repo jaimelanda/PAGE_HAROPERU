@@ -28,11 +28,7 @@ const stores = [
 
     <!-- Header minimalista -->
     <div class="text-center mb-20">
-      <div class="inline-flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-full mb-8">
-        <div class="w-2 h-2 bg-red-500 rounded-full"></div>
-        <span class="text-gray-600 font-medium uppercase tracking-wide text-sm montserrat">Ubicaciones</span>
-      </div>
-      <h2 class="text-5xl text-gray-900 mb-6 font-light montserrat">Nuestras Tiendas</h2>
+      <h2 class="text-3xl lg:text-4xl text-gray-900 mb-6 font-light montserrat">Nuestras Tiendas</h2>
       <p class="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed montserrat">Encuentra la ubicación más cercana a ti</p>
     </div>
 
@@ -42,10 +38,6 @@ const stores = [
         <div class="group relative" key={index}>
           <div class="relative p-8 transition-all duration-300 hover:bg-gray-50/50 rounded-2xl">
 
-            <!-- Número de tienda -->
-            <div class="flex items-center justify-center w-12 h-12 bg-white border border-gray-200 rounded-full text-gray-400 font-medium montserrat group-hover:border-red-500 group-hover:text-red-500 transition-all duration-300 mb-6">
-              {String(index + 1).padStart(2, '0')}
-            </div>
 
             <!-- Información de la tienda -->
             <div class="space-y-4 mb-6">
