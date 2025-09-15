@@ -134,8 +134,8 @@ import '@fontsource/montserrat/700.css';
     font-family: 'Montserrat', sans-serif !important;
   }
 
-  /* Formato tablet/teléfono - 2 columnas */
-  @media (max-width: 1024px) and (min-width: 481px) {
+  /* Formato tablet - 2 columnas */
+  @media (max-width: 1024px) and (min-width: 769px) {
     .max-w-7xl > div:first-child {
       display: grid !important;
       grid-template-columns: 1fr 1fr !important;
@@ -198,7 +198,8 @@ import '@fontsource/montserrat/700.css';
     }
   }
 
-  @media (max-width: 479px) {
+  /* Formato teléfono - 1 columna */
+  @media (max-width: 768px) {
     .lg\\:grid-cols-6 {
       grid-template-columns: 1fr;
       gap: 3rem;
