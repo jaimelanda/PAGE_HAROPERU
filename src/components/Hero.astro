@@ -2,6 +2,9 @@
 import heroImage1 from '../assets/images/1.png?url';
 import heroImage2 from '../assets/images/2.png?url';
 import heroImage3 from '../assets/images/3.png?url';
+import heroImage4 from '../assets/images/4.png?url';
+import heroImage5 from '../assets/images/5.png?url';
+import heroImage6 from '../assets/images/6.png?url';
 import '@fontsource/montserrat/400.css';
 import '@fontsource/montserrat/500.css';
 import '@fontsource/montserrat/600.css';
@@ -12,39 +15,48 @@ import '@fontsource/montserrat/700.css';
   <div class="relative w-full h-full">
     <!-- Slide 1 -->
     <div class="slide active absolute top-0 left-0 w-full h-full opacity-0 flex items-center z-10">
-      <div class="absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat" style={`background-image: url(${heroImage1})`}>
+      <!-- Desktop image (odd: 1) -->
+      <div class="desktop-bg absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat" style={`background-image: url(${heroImage1})`}>
+      </div>
+      <!-- Mobile image (even: 2) -->
+      <div class="mobile-bg absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat" style={`background-image: url(${heroImage2})`}>
       </div>
       <div class="absolute top-0 left-0 w-full h-full bg-black/40"></div>
       <div class="relative z-[25] w-full flex items-center justify-center" style="margin-top: -210px;">
         <div class="text-center max-w-4xl px-5">
-          <h1 class="text-white text-4xl lg:text-5xl font-semibold leading-tight mb-6 uppercase tracking-widest hero-title">DIRECCIÓN HIDRÁULICA PREMIUM</h1>
-          <p class="text-white text-lg leading-relaxed max-w-2xl mx-auto hero-text">Líderes en repuestos de cremalleras hidráulicas con más de una década de experiencia en el mercado peruano.</p>
+          <h1 class="text-white text-4xl lg:text-5xl font-semibold leading-tight mb-6 uppercase tracking-widest hero-title">REPUESTOS DE DIRECCIÓN HIDRÁULICA</h1>
         </div>
       </div>
     </div>
 
     <!-- Slide 2 -->
     <div class="slide absolute top-0 left-0 w-full h-full opacity-0 flex items-center z-10">
-      <div class="absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat" style={`background-image: url(${heroImage2})`}>
+      <!-- Desktop image (odd: 3) -->
+      <div class="desktop-bg absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat" style={`background-image: url(${heroImage3})`}>
+      </div>
+      <!-- Mobile image (even: 4) -->
+      <div class="mobile-bg absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat" style={`background-image: url(${heroImage4})`}>
       </div>
       <div class="absolute top-0 left-0 w-full h-full bg-black/40"></div>
       <div class="relative z-[25] w-full flex items-center justify-center" style="margin-top: -210px;">
         <div class="text-center max-w-4xl px-5">
-          <h1 class="text-white text-4xl lg:text-5xl font-semibold leading-tight mb-6 uppercase tracking-widest hero-title">SERVOS HIDRÁULICOS DE ALTA PRECISIÓN</h1>
-          <p class="text-white text-lg leading-relaxed max-w-2xl mx-auto hero-text">Expertos certificados en servos hidráulicos de última generación con tecnología europea y americana.</p>
+          <h1 class="text-white text-4xl lg:text-5xl font-semibold leading-tight mb-6 uppercase tracking-widest hero-title">BOMBAS DE DIRECCIÓN HIDRÁULICOS</h1>
         </div>
       </div>
     </div>
 
     <!-- Slide 3 -->
     <div class="slide absolute top-0 left-0 w-full h-full opacity-0 flex items-center z-10">
-      <div class="absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat" style={`background-image: url(${heroImage3})`}>
+      <!-- Desktop image (odd: 5) -->
+      <div class="desktop-bg absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat" style={`background-image: url(${heroImage5})`}>
+      </div>
+      <!-- Mobile image (even: 6) -->
+      <div class="mobile-bg absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat" style={`background-image: url(${heroImage6})`}>
       </div>
       <div class="absolute top-0 left-0 w-full h-full bg-black/40"></div>
       <div class="relative z-[25] w-full flex items-center justify-center" style="margin-top: -210px;">
         <div class="text-center max-w-4xl px-5">
-          <h1 class="text-white text-4xl lg:text-5xl font-semibold leading-tight mb-6 uppercase tracking-widest hero-title">SERVICIO TÉCNICO ESPECIALIZADO</h1>
-          <p class="text-white text-lg leading-relaxed max-w-2xl mx-auto hero-text">En HARO brindamos asesoría técnica profesional, diagnósticos computarizados y mantenimiento preventivo especializado.</p>
+          <h1 class="text-white text-4xl lg:text-5xl font-semibold leading-tight mb-6 uppercase tracking-widest hero-title">MAS DE 6000 REPUESTOS DISPONIBLES</h1>
         </div>
       </div>
     </div>
@@ -55,6 +67,7 @@ import '@fontsource/montserrat/700.css';
   <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/30 via-black/20 to-transparent z-[12]"></div>
   <!-- Main fusion gradient - covers entire image with intensity at bottom -->
   <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black via-black via-gray-900 via-transparent via-transparent to-transparent z-[15]"></div>
+
 
   <!-- Navigation dots -->
   <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-4 z-30">
@@ -69,22 +82,30 @@ document.addEventListener('DOMContentLoaded', function() {
   let slideIndex = 0;
   const slides = document.querySelectorAll('.slide');
   const dots = document.querySelectorAll('.nav-dot');
+  const heroSection = document.querySelector('section');
+
+  // Touch event variables
+  let startX = 0;
+  let startY = 0;
+  let endX = 0;
+  let endY = 0;
+  const minSwipeDistance = 50;
 
   function showSlide(n) {
     slideIndex = (n + slides.length) % slides.length;
-    
+
     // Hide all slides instantly
     slides.forEach((slide, index) => {
       slide.classList.remove('active');
       slide.style.zIndex = '1';
       slide.style.opacity = '0';
     });
-    
+
     // Show new slide instantly and bring to front
     slides[slideIndex].style.zIndex = '15';
     slides[slideIndex].style.opacity = '1';
     slides[slideIndex].classList.add('active');
-    
+
     // Update dots
     dots.forEach(dot => dot.classList.remove('active'));
     dots[slideIndex].classList.add('active');
@@ -92,6 +113,42 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function currentSlide(n) {
     showSlide(n - 1);
+  }
+
+  function nextSlide() {
+    showSlide(slideIndex + 1);
+  }
+
+  function previousSlide() {
+    showSlide(slideIndex - 1);
+  }
+
+  // Touch events for swipe navigation
+  heroSection.addEventListener('touchstart', function(e) {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+  }, { passive: true });
+
+  heroSection.addEventListener('touchend', function(e) {
+    endX = e.changedTouches[0].clientX;
+    endY = e.changedTouches[0].clientY;
+    handleSwipe();
+  }, { passive: true });
+
+  function handleSwipe() {
+    const deltaX = endX - startX;
+    const deltaY = endY - startY;
+
+    // Check if horizontal swipe is more significant than vertical
+    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > minSwipeDistance) {
+      if (deltaX > 0) {
+        // Swipe right - previous slide
+        previousSlide();
+      } else {
+        // Swipe left - next slide
+        nextSlide();
+      }
+    }
   }
 
   // Initialize first slide
@@ -102,8 +159,10 @@ document.addEventListener('DOMContentLoaded', function() {
     showSlide(slideIndex + 1);
   }, 7000);
 
-  // Make currentSlide globally available
+  // Make functions globally available
   window.currentSlide = currentSlide;
+  window.nextSlide = nextSlide;
+  window.previousSlide = previousSlide;
 });
 </script>
 
@@ -133,6 +192,15 @@ document.addEventListener('DOMContentLoaded', function() {
     padding-top: 0 !important;
   }
 
+  /* Desktop images (show odd numbered images 1, 3, 5) */
+  .slide .desktop-bg {
+    display: block !important;
+  }
+
+  .slide .mobile-bg {
+    display: none !important;
+  }
+
   @media (max-width: 768px) {
     .relative.h-screen {
       height: 100vh !important;
@@ -151,6 +219,15 @@ document.addEventListener('DOMContentLoaded', function() {
     .px-8.py-4 {
       padding: 12px 24px !important;
       font-size: 14px !important;
+    }
+
+    /* Mobile images (show even numbered images 2, 4, 6) */
+    .slide .desktop-bg {
+      display: none !important;
+    }
+
+    .slide .mobile-bg {
+      display: block !important;
     }
   }
 </style>
