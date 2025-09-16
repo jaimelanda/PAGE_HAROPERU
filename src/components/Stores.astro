@@ -6,19 +6,22 @@ import '@fontsource/montserrat/700.css';
 
 const stores = [
   {
-    name: "Tienda Independencia 1",
+    name: "Psj. Azapa 240, La Victoria, Lima",
     address: "Calle Las Prensas 160, Independencia, Lima",
-    locationUrl: "https://maps.google.com/?q=Calle+Las+Prensas+160+Independencia+Lima+Peru"
+    locationUrl: "https://maps.google.com/?q=Calle+Las+Prensas+160+Independencia+Lima+Peru",
+    image: "/src/assets/images/stores/1.png"
   },
   {
-    name: "Tienda Independencia 2",
+    name: "Call. Las Prensas, Indepencia, Lima",
     address: "Calle Las Prensas 440, Independencia, Lima",
-    locationUrl: "https://maps.google.com/?q=Calle+Las+Prensas+440+Independencia+Lima+Peru"
+    locationUrl: "https://maps.google.com/?q=Calle+Las+Prensas+440+Independencia+Lima+Peru",
+    image: "/src/assets/images/stores/2.png"
   },
   {
-    name: "Tienda Arequipa",
+    name: "Calle 22 de Agosto, Arequipa",
     address: "Calle 22 de Agosto, Arequipa",
-    locationUrl: "https://maps.google.com/?q=Calle+22+de+Agosto+Arequipa+Peru"
+    locationUrl: "https://maps.google.com/?q=Calle+22+de+Agosto+Arequipa+Peru",
+    image: "/src/assets/images/stores/3.png"
   }
 ];
 ---
@@ -36,34 +39,31 @@ const stores = [
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
       {stores.map((store, index) => (
         <div class="group relative" key={index}>
-          <div class="relative p-8 transition-all duration-300 hover:bg-gray-50/50 rounded-2xl">
+          <!-- Título de la tienda -->
+          <h3 class="text-xl font-medium text-gray-900 montserrat mb-4 group-hover:text-red-900 transition-colors duration-300">
+            {store.name}
+          </h3>
+
+          <div class="relative rounded-2xl overflow-hidden h-80 transition-all duration-300 hover:shadow-xl">
+
+            <!-- Imagen de fondo que cubre toda la tarjeta -->
+            <img
+              src={store.image}
+              alt={store.name}
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+
+            <!-- Overlay oscuro sutil -->
+            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-300"></div>
 
 
-            <!-- Información de la tienda -->
-            <div class="space-y-4 mb-6">
-              <h3 class="text-xl font-light text-gray-900 montserrat group-hover:text-red-900 transition-colors duration-300">
-                {store.name}
-              </h3>
-              <p class="text-gray-500 leading-relaxed montserrat text-sm">
-                {store.address}
-              </p>
-            </div>
-
-            <!-- Placeholder para mapa -->
-            <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl h-40 flex items-center justify-center border border-gray-200 group-hover:border-red-200 transition-all duration-300 mb-6">
-              <div class="text-center">
-                <div class="w-8 h-8 bg-gray-300 rounded-full mb-2 mx-auto group-hover:bg-red-300 transition-colors duration-300"></div>
-                <span class="text-xs text-gray-400 montserrat">Mapa interactivo</span>
-              </div>
-            </div>
-
-            <!-- Botón de acción -->
-            <div class="text-center">
+            <!-- Botón de acción en la parte inferior -->
+            <div class="absolute bottom-6 right-6">
               <a
                 href={store.locationUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="inline-flex items-center justify-center w-12 h-12 bg-white border border-gray-200 rounded-full text-gray-400 hover:border-red-500 hover:text-red-500 hover:bg-red-50 transition-all duration-300 montserrat"
+                class="inline-flex items-center justify-center w-12 h-12 bg-white/90 backdrop-blur-sm border border-white/20 rounded-full text-gray-600 hover:border-red-500 hover:text-red-500 hover:bg-white transition-all duration-300 montserrat shadow-lg"
               >
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -73,7 +73,7 @@ const stores = [
             </div>
 
             <!-- Indicador lateral sutil -->
-            <div class="absolute left-0 top-0 bottom-0 w-1 bg-transparent group-hover:bg-gradient-to-b group-hover:from-red-500 group-hover:to-red-600 transition-all duration-500 rounded-r-full"></div>
+            <div class="absolute left-0 top-0 bottom-0 w-1 bg-transparent group-hover:bg-gradient-to-b group-hover:from-red-500 group-hover:to-red-600 transition-all duration-500"></div>
           </div>
         </div>
       ))}

@@ -1,6 +1,8 @@
 ---
 // Imagen temporal para productos sin imagen
-import temporaryImage from '../assets/images/categories/1_cremallerasH.png?url';
+import temporaryImage1 from '../assets/images/categories/1_cremallerasH.png?url';
+import temporaryImage2 from '../assets/images/categories/2_servos.png?url';
+import temporaryImage3 from '../assets/images/categories/3_retenes.png?url';
 import BrandsCarousel from './BrandsCarousel.astro';
 import '@fontsource/montserrat/400.css';
 import '@fontsource/montserrat/500.css';
@@ -10,22 +12,22 @@ import '@fontsource/montserrat/700.css';
 // Datos de productos para el diseño futurista
 const products = [
   {
-    title: "Dirección Hidráulica",
-    description: "Sistemas de dirección hidráulica de última generación con tecnología de precisión. Nuestros repuestos garantizan un control excepcional y durabilidad superior para todo tipo de vehículos comerciales y de pasajeros.",
-    image: temporaryImage,
-    features: ["Alta precisión", "Durabilidad superior", "Fácil instalación"]
+    title: "Repuestos de direccion automotriz",
+    description: "Contamos con cremalleras hidráulicas, eléctricas y asistidas en las mejores marcas HYD y DKM. Ofrecemos repuestos de alta calidad para todo modelo de vehículo, garantizando un rendimiento confiable y una conducción segura en cualquier camino.",
+    image: temporaryImage1,
+    features: ["Hidráulica", "Asistida", "Eléctrica"]
   },
   {
     title: "Bombas de dirección hidráulica",
-    description: "Innovadores sistemas electrónicos para dirección asistida que combinan eficiencia energética con rendimiento óptimo. Tecnología de vanguardia para la nueva era del transporte inteligente.",
-    image: temporaryImage,
-    features: ["Eficiencia energética", "Tecnología inteligente", "Control adaptativo"]
+    description: "Bombas de dirección hidráulica (SERVOS HIDRÁULICOS), disponible en las mejor marca HYD . Contamos además con accesorios de alta calidad como ROTORES, garantizando eficiencia y desempeño en cada vehículo.",
+    image: temporaryImage2,
+    features: ["SERVOS HIDRÁULICOS", "ROTORES"]
   },
   {
-    title: "Accesorios",
-    description: "Servos hidráulicos diseñados con ingeniería alemana para aplicaciones industriales exigentes. Perfectos para vehículos pesados y maquinaria especializada que requiere máxima confiabilidad.",
-    image: temporaryImage,
-    features: ["Ingeniería alemana", "Máxima confiabilidad", "Aplicaciones industriales"]
+    title: "Retenes para Cremalleras",
+    description: "Retenes para cremalleras de dirección diseñados con materiales de alta resistencia. Soluciones confiables que aseguran un sellado perfecto y prolongan la vida útil del sistema en todo tipo de vehículos.",
+    image: temporaryImage3,
+    features: ["RETENES", "NOK"]
   }
 ];
 ---
