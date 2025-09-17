@@ -23,7 +23,7 @@ import '@fontsource/montserrat/700.css';
         <div>
           <span class="text-gray-300 text-sm font-medium montserrat mb-4 block">Síguenos</span>
           <div class="flex gap-3 justify-center lg:justify-start">
-            <a href="https://www.facebook.com/HaroPeru1" target="_blank" aria-label="Facebook" class="w-10 h-10 bg-gray-900 border border-gray-700 rounded-xl flex items-center justify-center text-gray-400 transition-all duration-300 hover:border-red-500 hover:bg-red-500/10 hover:text-red-500"><i class="fab fa-facebook-f text-sm"></i></a>
+            <a href="https://www.facebook.com/HaroPeru1" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-link w-10 h-10 bg-gray-900 border border-gray-700 rounded-xl flex items-center justify-center text-gray-400 transition-all duration-300 hover:border-red-500 hover:bg-red-500/10 hover:text-red-500 touch-manipulation"><i class="fab fa-facebook-f text-sm"></i></a>
             <a href="https://www.instagram.com/harodireccionhidraulica/" target="_blank" aria-label="Instagram" class="w-10 h-10 bg-gray-900 border border-gray-700 rounded-xl flex items-center justify-center text-gray-400 transition-all duration-300 hover:border-red-500 hover:bg-red-500/10 hover:text-red-500"><i class="fab fa-instagram text-sm"></i></a>
             <a href="https://www.tiktok.com/@haro_direccionhidraulica" target="_blank" aria-label="TikTok" class="w-10 h-10 bg-gray-900 border border-gray-700 rounded-xl flex items-center justify-center text-gray-400 transition-all duration-300 hover:border-red-500 hover:bg-red-500/10 hover:text-red-500"><i class="fab fa-tiktok text-sm"></i></a>
             <a href="https://wa.me/51992767584" target="_blank" aria-label="WhatsApp" class="w-10 h-10 bg-gray-900 border border-gray-700 rounded-xl flex items-center justify-center text-gray-400 transition-all duration-300 hover:border-red-500 hover:bg-red-500/10 hover:text-red-500"><i class="fab fa-whatsapp text-sm"></i></a>
@@ -198,16 +198,46 @@ import '@fontsource/montserrat/700.css';
     }
   }
 
-  /* Formato teléfono - 1 columna */
+  /* Formato teléfono - 2x2 grid para las 4 secciones */
   @media (max-width: 768px) {
-    .lg\\:grid-cols-6 {
-      grid-template-columns: 1fr;
-      gap: 3rem;
-      text-align: center;
+    .max-w-7xl > div:first-child {
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+      gap: 2rem !important;
+    }
+
+    /* Logo - ocupa ambas columnas (primera fila completa) */
+    .max-w-7xl > div:first-child > div:nth-child(1) {
+      grid-column: 1 / span 2 !important;
+      text-align: center !important;
+    }
+
+    /* Productos - primera columna, segunda fila */
+    .max-w-7xl > div:first-child > div:nth-child(2) {
+      grid-column: 1 !important;
+      text-align: center !important;
+    }
+
+    /* Empresa - segunda columna, segunda fila */
+    .max-w-7xl > div:first-child > div:nth-child(3) {
+      grid-column: 2 !important;
+      text-align: center !important;
+    }
+
+    /* Contacto - primera columna, tercera fila */
+    .max-w-7xl > div:first-child > div:nth-child(4) {
+      grid-column: 1 !important;
+      text-align: center !important;
+    }
+
+    /* Legales - segunda columna, tercera fila */
+    .max-w-7xl > div:first-child > div:nth-child(5) {
+      grid-column: 2 !important;
+      text-align: center !important;
     }
 
     .lg\\:col-span-2, .lg\\:col-span-1 {
-      grid-column: span 1;
+      grid-column: unset !important;
     }
 
     /* TODAS las secciones centradas */
@@ -372,6 +402,34 @@ import '@fontsource/montserrat/700.css';
   @media (max-width: 480px) {
     .pb-24 {
       padding-bottom: 11.25rem; /* 180px */
+    }
+  }
+
+  /* Mejoras para interacción táctil en móviles */
+  @media (max-width: 768px) {
+    .social-link {
+      min-height: 44px !important; /* Tamaño mínimo para touch targets */
+      min-width: 44px !important;
+      -webkit-tap-highlight-color: rgba(220, 38, 38, 0.2) !important;
+      user-select: none !important;
+      -webkit-user-select: none !important;
+      -moz-user-select: none !important;
+      -ms-user-select: none !important;
+      cursor: pointer !important;
+      z-index: 10 !important;
+      position: relative !important;
+    }
+
+    .social-link:active {
+      transform: scale(0.95) !important;
+      background-color: rgba(220, 38, 38, 0.1) !important;
+      border-color: #dc2626 !important;
+      color: #dc2626 !important;
+    }
+
+    .social-link i {
+      pointer-events: none !important;
+      font-size: 16px !important;
     }
   }
 </style>

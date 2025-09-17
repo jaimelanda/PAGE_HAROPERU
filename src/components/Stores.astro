@@ -6,22 +6,22 @@ import '@fontsource/montserrat/700.css';
 
 const stores = [
   {
-    name: "Psj. Azapa 240, La Victoria, Lima",
+    name: "Pje. Azapa 240, La Victoria, Lima",
     address: "Calle Las Prensas 160, Independencia, Lima",
     locationUrl: "https://maps.google.com/?q=Calle+Las+Prensas+160+Independencia+Lima+Peru",
-    image: "/src/assets/images/stores/1.png"
+    image: "/images/stores/1.png"
   },
   {
-    name: "Call. Las Prensas, Indepencia, Lima",
+    name: "Ca. Las Prensas 440, Indep., Lima",
     address: "Calle Las Prensas 440, Independencia, Lima",
     locationUrl: "https://maps.google.com/?q=Calle+Las+Prensas+440+Independencia+Lima+Peru",
-    image: "/src/assets/images/stores/2.png"
+    image: "/images/stores/2.png"
   },
   {
     name: "Calle 22 de Agosto, Arequipa",
     address: "Calle 22 de Agosto, Arequipa",
     locationUrl: "https://maps.google.com/?q=Calle+22+de+Agosto+Arequipa+Peru",
-    image: "/src/assets/images/stores/3.png"
+    image: "/images/stores/3.png"
   }
 ];
 ---
@@ -44,7 +44,7 @@ const stores = [
             {store.name}
           </h3>
 
-          <div class="relative rounded-2xl overflow-hidden h-80 transition-all duration-300 hover:shadow-xl">
+          <div class="relative overflow-hidden h-80 transition-all duration-300 hover:shadow-xl">
 
             <!-- Imagen de fondo que cubre toda la tarjeta -->
             <img
@@ -72,8 +72,17 @@ const stores = [
               </a>
             </div>
 
-            <!-- Indicador lateral sutil -->
-            <div class="absolute left-0 top-0 bottom-0 w-1 bg-transparent group-hover:bg-gradient-to-b group-hover:from-red-500 group-hover:to-red-600 transition-all duration-500"></div>
+            <!-- Efecto elegante de esquinas -->
+            <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              <!-- Esquina superior izquierda -->
+              <div class="absolute top-0 left-0 w-0 h-0 group-hover:w-8 group-hover:h-8 border-t-4 border-l-4 border-amber-400 transition-all duration-700 ease-out"></div>
+              <!-- Esquina superior derecha -->
+              <div class="absolute top-0 right-0 w-0 h-0 group-hover:w-8 group-hover:h-8 border-t-4 border-r-4 border-amber-400 transition-all duration-700 ease-out delay-75"></div>
+              <!-- Esquina inferior izquierda -->
+              <div class="absolute bottom-0 left-0 w-0 h-0 group-hover:w-8 group-hover:h-8 border-b-4 border-l-4 border-amber-400 transition-all duration-700 ease-out delay-150"></div>
+              <!-- Esquina inferior derecha -->
+              <div class="absolute bottom-0 right-0 w-0 h-0 group-hover:w-8 group-hover:h-8 border-b-4 border-r-4 border-amber-400 transition-all duration-700 ease-out delay-200"></div>
+            </div>
           </div>
         </div>
       ))}
