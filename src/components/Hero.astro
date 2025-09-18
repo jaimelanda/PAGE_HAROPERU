@@ -5,6 +5,7 @@ import heroImage3 from '../assets/images/3.jpg?url';
 import heroImage4 from '../assets/images/4.jpg?url';
 import heroImage5 from '../assets/images/5.jpg?url';
 import heroImage6 from '../assets/images/6.jpg?url';
+import HeroSlideManager from './HeroSlideManager';
 import '@fontsource/montserrat/400.css';
 import '@fontsource/montserrat/500.css';
 import '@fontsource/montserrat/600.css';
@@ -14,7 +15,7 @@ import '@fontsource/montserrat/700.css';
 <section class="relative h-screen overflow-hidden z-[999]">
   <div class="relative w-full h-full">
     <!-- Slide 1 -->
-    <div class="slide active absolute top-0 left-0 w-full h-full opacity-0 flex items-center z-10">
+    <div class="slide active absolute top-0 left-0 w-full h-full opacity-0 z-10">
       <!-- Desktop image (odd: 1) -->
       <div class="desktop-bg absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat" style={`background-image: url(${heroImage1})`}>
       </div>
@@ -22,15 +23,10 @@ import '@fontsource/montserrat/700.css';
       <div class="mobile-bg absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat" style={`background-image: url(${heroImage2})`}>
       </div>
       <div class="absolute top-0 left-0 w-full h-full bg-black/40"></div>
-      <div class="relative z-[25] w-full flex items-center justify-center" style="margin-top: -300px;">
-        <div class="text-center max-w-4xl px-5">
-          <h1 class="text-white text-4xl lg:text-5xl font-black leading-tight mb-6 uppercase tracking-widest hero-title">REPUESTOS DE DIRECCIÓN HIDRÁULICA</h1>
-        </div>
-      </div>
     </div>
 
     <!-- Slide 2 -->
-    <div class="slide absolute top-0 left-0 w-full h-full opacity-0 flex items-center z-10">
+    <div class="slide absolute top-0 left-0 w-full h-full opacity-0 z-10">
       <!-- Desktop image (odd: 3) -->
       <div class="desktop-bg absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat" style={`background-image: url(${heroImage3})`}>
       </div>
@@ -38,15 +34,10 @@ import '@fontsource/montserrat/700.css';
       <div class="mobile-bg absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat" style={`background-image: url(${heroImage4})`}>
       </div>
       <div class="absolute top-0 left-0 w-full h-full bg-black/40"></div>
-      <div class="relative z-[25] w-full flex items-center justify-center" style="margin-top: -300px;">
-        <div class="text-center max-w-4xl px-5">
-          <h1 class="text-white text-4xl lg:text-5xl font-black leading-tight mb-6 uppercase tracking-widest hero-title">BOMBAS DE DIRECCIÓN HIDRÁULICOS</h1>
-        </div>
-      </div>
     </div>
 
     <!-- Slide 3 -->
-    <div class="slide absolute top-0 left-0 w-full h-full opacity-0 flex items-center z-10">
+    <div class="slide absolute top-0 left-0 w-full h-full opacity-0 z-10">
       <!-- Desktop image (odd: 5) -->
       <div class="desktop-bg absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat" style={`background-image: url(${heroImage5})`}>
       </div>
@@ -54,12 +45,10 @@ import '@fontsource/montserrat/700.css';
       <div class="mobile-bg absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat" style={`background-image: url(${heroImage6})`}>
       </div>
       <div class="absolute top-0 left-0 w-full h-full bg-black/40"></div>
-      <div class="relative z-[25] w-full flex items-center justify-center" style="margin-top: -300px;">
-        <div class="text-center max-w-4xl px-5">
-          <h1 class="text-white text-4xl lg:text-5xl font-black leading-tight mb-6 uppercase tracking-widest hero-title">MAS DE 6000 REPUESTOS DISPONIBLES</h1>
-        </div>
-      </div>
     </div>
+
+    <!-- Animated titles -->
+    <HeroSlideManager client:load />
 
   <!-- Permanent overlay and gradients -->
   <div class="absolute top-0 left-0 w-full h-full bg-black/50 z-[5]"></div>
@@ -109,6 +98,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Update dots
     dots.forEach(dot => dot.classList.remove('active'));
     dots[slideIndex].classList.add('active');
+
+    // Emit custom event for React component
+    window.dispatchEvent(new CustomEvent('slideChanged', {
+      detail: { slideIndex }
+    }));
   }
 
   function currentSlide(n) {
@@ -186,6 +180,14 @@ document.addEventListener('DOMContentLoaded', function() {
     transform: scale(1.2) !important;
   }
 
+  .slide-title {
+    pointer-events: none;
+  }
+
+  .slide-title.active {
+    pointer-events: auto;
+  }
+
   .relative.h-screen {
     height: 100vh !important;
     margin-top: 0 !important;
@@ -225,6 +227,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     /* Move title higher on mobile */
     .relative.z-\[25\] {
+      margin-top: -350px !important;
+    }
+
+    .slide-title {
       margin-top: -350px !important;
     }
 

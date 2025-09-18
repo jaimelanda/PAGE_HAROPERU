@@ -8,7 +8,7 @@ const stores = [
   {
     name: "Pje. Azapa 240, La Victoria, Lima",
     address: "Calle Las Prensas 160, Independencia, Lima",
-    locationUrl: "https://maps.google.com/?q=Calle+Las+Prensas+160+Independencia+Lima+Peru",
+    locationUrl: "https://maps.app.goo.gl/G4yvsVZovB9eFbxn8",
     image: "/images/stores/1.png"
   },
   {
@@ -44,8 +44,13 @@ const stores = [
             {store.name}
           </h3>
 
-          <div class="relative overflow-hidden h-80 transition-all duration-300 hover:shadow-xl">
-
+          <!-- Contenedor clickeable que redirige a Google Maps -->
+          <a
+            href={store.locationUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block relative overflow-hidden h-80 transition-all duration-300 hover:shadow-xl cursor-pointer"
+          >
             <!-- Imagen de fondo que cubre toda la tarjeta -->
             <img
               src={store.image}
@@ -56,20 +61,14 @@ const stores = [
             <!-- Overlay oscuro sutil -->
             <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-300"></div>
 
-
-            <!-- Botón de acción en la parte inferior -->
+            <!-- Icono de ubicación en la parte inferior -->
             <div class="absolute bottom-6 right-6">
-              <a
-                href={store.locationUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center justify-center w-12 h-12 bg-white/90 backdrop-blur-sm border border-white/20 rounded-full text-gray-600 hover:border-red-500 hover:text-red-500 hover:bg-white transition-all duration-300 montserrat shadow-lg"
-              >
+              <div class="inline-flex items-center justify-center w-12 h-12 bg-white/90 backdrop-blur-sm border border-white/20 rounded-full text-gray-600 group-hover:border-red-500 group-hover:text-red-500 group-hover:bg-white transition-all duration-300 montserrat shadow-lg">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-              </a>
+              </div>
             </div>
 
             <!-- Efecto elegante de esquinas -->
@@ -83,7 +82,7 @@ const stores = [
               <!-- Esquina inferior derecha -->
               <div class="absolute bottom-0 right-0 w-0 h-0 group-hover:w-8 group-hover:h-8 border-b-4 border-r-4 border-amber-400 transition-all duration-700 ease-out delay-200"></div>
             </div>
-          </div>
+          </a>
         </div>
       ))}
     </div>
