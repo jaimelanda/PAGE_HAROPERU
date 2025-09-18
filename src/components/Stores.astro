@@ -3,97 +3,237 @@ import '@fontsource/montserrat/400.css';
 import '@fontsource/montserrat/500.css';
 import '@fontsource/montserrat/600.css';
 import '@fontsource/montserrat/700.css';
+import { motion } from 'framer-motion';
 
 const stores = [
   {
     name: "Pje. Azapa 240, La Victoria, Lima",
-    address: "Calle Las Prensas 160, Independencia, Lima",
-    locationUrl: "https://maps.app.goo.gl/G4yvsVZovB9eFbxn8",
+    locationUrl: "https://www.google.com/maps/place/HARO+-+SERVOS+y+CREMALLERAS/@-12.0609975,-77.0322732,21z/data=!4m6!3m5!1s0x9105c92a70013023:0xb6b56331f52d15c!8m2!3d-12.0610084!4d-77.0323593!16s%2Fg%2F11g0lbbdvt?entry=ttu&g_ep=EgoyMDI1MDkxNi4wIKXMDSoASAFQAw%3D%3D",
     image: "/images/stores/1.png"
   },
   {
     name: "Ca. Las Prensas 440, Indep., Lima",
-    address: "Calle Las Prensas 440, Independencia, Lima",
-    locationUrl: "https://maps.google.com/?q=Calle+Las+Prensas+440+Independencia+Lima+Peru",
+    locationUrl: "https://www.google.com/maps/@-11.9814229,-77.0640559,3a,24.9y,187.25h,89.4t/data=!3m7!1e1!3m5!1skSG3poil1DQRaJxHa8NUdw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0.60294841784075%26panoid%3DkSG3poil1DQRaJxHa8NUdw%26yaw%3D187.25280555802152!7i16384!8i8192!5m2!1e4!1e1?entry=ttu&g_ep=EgoyMDI1MDkxNi4wIKXMDSoASAFQAw%3D%3D",
     image: "/images/stores/2.png"
   },
   {
-    name: "Calle 22 de Agosto, Arequipa",
-    address: "Calle 22 de Agosto, Arequipa",
-    locationUrl: "https://maps.google.com/?q=Calle+22+de+Agosto+Arequipa+Peru",
+    name: "Ca. 22 de Agosto 319, Arequipa",
+    locationUrl: "https://www.google.com/maps/place/16%C2%B023'45.1%22S+71%C2%B031'18.1%22W/@-16.3958718,-71.5217779,3a,75y,76.33h,98.33t/data=!3m7!1e1!3m5!1suL2241JFXzLRPG3JA8c9EA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-8.32585608919328%26panoid%3DuL2241JFXzLRPG3JA8c9EA%26yaw%3D76.33336906763535!7i16384!8i8192!4m4!3m3!8m2!3d-16.395867!4d-71.5216805!5m2!1e4!1e1?hl=en&entry=ttu&g_ep=EgoyMDI1MDkxNi4wIKXMDSoASAFQAw%3D%3D",
     image: "/images/stores/3.png"
   }
 ];
 ---
 
 <section id="tiendas" class="py-24 bg-white">
-  <div class="max-w-7xl mx-auto px-6">
+  <div class="max-w-7xl mx-auto px-6 text-center">
 
     <!-- Header minimalista -->
-    <div class="text-center mb-20">
-      <h2 class="text-3xl lg:text-4xl text-gray-900 mb-6 font-light montserrat">Nuestras Tiendas</h2>
-      <p class="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed montserrat">Encuentra la ubicación más cercana a ti</p>
-    </div>
+    <motion.div
+      class="text-center mb-32 w-full"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      client:load
+    >
+      <h3 class="text-3xl lg:text-4xl text-gray-900 mb-6 font-light montserrat">Nuestras Tiendas</h3>
+      <p class="text-gray-500 max-w-2xl mx-auto leading-relaxed montserrat mb-8">Encuentra la ubicación más cercana a ti</p>
+    </motion.div>
 
     <!-- Tiendas en fila horizontal -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 justify-items-center">
       {stores.map((store, index) => (
-        <div class="group relative" key={index}>
-          <!-- Título de la tienda -->
-          <h3 class="text-xl font-medium text-gray-900 montserrat mb-4 group-hover:text-red-900 transition-colors duration-300">
-            {store.name}
-          </h3>
+        <motion.div
+          class="group relative w-full max-w-sm mx-auto"
+          key={index}
+          initial={{ opacity: 0, y: 80, scale: 0.8 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{
+            duration: 0.8,
+            delay: index * 0.15,
+            ease: "easeOut",
+            type: "spring",
+            stiffness: 100
+          }}
+          whileHover={{
+            y: -8,
+            scale: 1.02,
+            transition: { duration: 0.3, ease: "easeOut" }
+          }}
+          client:load
+        >
+          <!-- Título de la tienda encima -->
+          <div class="mb-4 text-center">
+            <motion.h3
+              class="text-xl font-medium text-gray-900 montserrat"
+              whileHover={{
+                color: "#7f1d1d",
+                transition: { duration: 0.3 }
+              }}
+            >
+              {store.name}
+            </motion.h3>
+          </div>
+
+          <!-- Marco superior estilo Google Maps permanente -->
+          <div class="bg-white border border-gray-300 rounded-t-lg">
+            <div class="h-12 bg-white border-b border-gray-200 flex items-center px-4">
+              <div class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                <span class="text-sm text-gray-700 font-medium montserrat">Google Maps</span>
+              </div>
+              <div class="ml-auto flex items-center gap-1">
+                <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+                <div class="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+              </div>
+            </div>
+          </div>
 
           <!-- Contenedor clickeable que redirige a Google Maps -->
-          <a
+          <motion.a
             href={store.locationUrl}
             target="_blank"
             rel="noopener noreferrer"
-            class="block relative overflow-hidden h-80 transition-all duration-300 hover:shadow-xl cursor-pointer"
+            class="block relative overflow-hidden h-80 cursor-pointer border-l-4 border-r-4 border-b-4 border-gray-300 shadow-lg rounded-b-lg"
+            whileHover={{
+              scale: 1.02,
+              boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+              borderColor: "#4285f4",
+              transition: { duration: 0.3, ease: "easeOut" }
+            }}
+            whileTap={{ scale: 0.98 }}
+            client:load
           >
+
             <!-- Imagen de fondo que cubre toda la tarjeta -->
-            <img
+            <motion.img
               src={store.image}
               alt={store.name}
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              class="w-full h-full object-cover"
+              whileHover={{
+                scale: 1.05,
+                transition: { duration: 0.4, ease: "easeOut" }
+              }}
+              client:load
             />
 
             <!-- Overlay oscuro sutil -->
-            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-300"></div>
+            <motion.div
+              class="absolute inset-0 bg-black/10"
+              whileHover={{
+                backgroundColor: "rgba(0, 0, 0, 0.25)",
+                transition: { duration: 0.3 }
+              }}
+              client:load
+            ></motion.div>
 
-            <!-- Icono de ubicación en la parte inferior -->
-            <div class="absolute bottom-6 right-6">
-              <div class="inline-flex items-center justify-center w-12 h-12 bg-white/90 backdrop-blur-sm border border-white/20 rounded-full text-gray-600 group-hover:border-red-500 group-hover:text-red-500 group-hover:bg-white transition-all duration-300 montserrat shadow-lg">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            <!-- Indicador de ubicación -->
+            <div class="absolute bottom-4 right-4">
+              <motion.div
+                class="inline-flex items-center justify-center w-10 h-10 bg-white/90 backdrop-blur-sm border border-white/20 rounded-full text-gray-600 montserrat shadow-lg"
+                whileHover={{
+                  scale: 1.1,
+                  backgroundColor: "rgba(255, 255, 255, 1)",
+                  borderColor: "rgba(220, 38, 38, 1)",
+                  color: "rgba(220, 38, 38, 1)",
+                  rotate: 15,
+                  transition: { duration: 0.2, ease: "easeOut" }
+                }}
+                whileTap={{ scale: 0.95 }}
+                client:load
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
-              </div>
+              </motion.div>
             </div>
 
             <!-- Efecto elegante de esquinas -->
-            <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+            <motion.div
+              class="absolute inset-0"
+              initial={{ opacity: 0 }}
+              whileHover={{
+                opacity: 1,
+                transition: { duration: 0.5 }
+              }}
+            >
               <!-- Esquina superior izquierda -->
-              <div class="absolute top-0 left-0 w-0 h-0 group-hover:w-8 group-hover:h-8 border-t-4 border-l-4 border-amber-400 transition-all duration-700 ease-out"></div>
+              <motion.div
+                class="absolute top-2 left-2 border-t-4 border-l-4 border-amber-400"
+                initial={{ width: 0, height: 0 }}
+                whileHover={{
+                  width: 32,
+                  height: 32,
+                  transition: { duration: 0.7, ease: "easeOut" }
+                }}
+              ></motion.div>
               <!-- Esquina superior derecha -->
-              <div class="absolute top-0 right-0 w-0 h-0 group-hover:w-8 group-hover:h-8 border-t-4 border-r-4 border-amber-400 transition-all duration-700 ease-out delay-75"></div>
+              <motion.div
+                class="absolute top-2 right-2 border-t-4 border-r-4 border-amber-400"
+                initial={{ width: 0, height: 0 }}
+                whileHover={{
+                  width: 32,
+                  height: 32,
+                  transition: { duration: 0.7, ease: "easeOut", delay: 0.075 }
+                }}
+              ></motion.div>
               <!-- Esquina inferior izquierda -->
-              <div class="absolute bottom-0 left-0 w-0 h-0 group-hover:w-8 group-hover:h-8 border-b-4 border-l-4 border-amber-400 transition-all duration-700 ease-out delay-150"></div>
+              <motion.div
+                class="absolute bottom-2 left-2 border-b-4 border-l-4 border-amber-400"
+                initial={{ width: 0, height: 0 }}
+                whileHover={{
+                  width: 32,
+                  height: 32,
+                  transition: { duration: 0.7, ease: "easeOut", delay: 0.15 }
+                }}
+              ></motion.div>
               <!-- Esquina inferior derecha -->
-              <div class="absolute bottom-0 right-0 w-0 h-0 group-hover:w-8 group-hover:h-8 border-b-4 border-r-4 border-amber-400 transition-all duration-700 ease-out delay-200"></div>
-            </div>
-          </a>
-        </div>
+              <motion.div
+                class="absolute bottom-2 right-2 border-b-4 border-r-4 border-amber-400"
+                initial={{ width: 0, height: 0 }}
+                whileHover={{
+                  width: 32,
+                  height: 32,
+                  transition: { duration: 0.7, ease: "easeOut", delay: 0.2 }
+                }}
+              ></motion.div>
+            </motion.div>
+          </motion.a>
+        </motion.div>
       ))}
     </div>
 
     <!-- Información adicional -->
-    <div class="mt-20 text-center">
-      <div class="inline-flex items-center gap-2 px-6 py-3 bg-gray-50 rounded-full">
+    <motion.div
+      class="mt-20 text-center w-full flex justify-center"
+      initial={{ opacity: 0, y: 30, scale: 0.9 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{
+        duration: 0.7,
+        delay: 0.6,
+        ease: "easeOut",
+        type: "spring",
+        stiffness: 120
+      }}
+      client:load
+    >
+      <motion.div
+        class="inline-flex items-center gap-2 px-6 py-3 bg-gray-50 rounded-full"
+        whileHover={{
+          scale: 1.05,
+          backgroundColor: "rgba(239, 246, 255, 1)",
+          transition: { duration: 0.3 }
+        }}
+      >
         <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
         <span class="text-gray-600 text-sm montserrat">Todas las tiendas están operativas</span>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
 
   </div>
 </section>
@@ -106,7 +246,7 @@ const stores = [
   /* Mobile responsive adjustments */
   @media (max-width: 768px) {
     .grid-cols-1 {
-      gap: 1.5rem;
+      gap: 2rem;
     }
 
     .text-4xl {
@@ -119,6 +259,11 @@ const stores = [
 
     .p-6 {
       padding: 1rem;
+    }
+
+    /* Aumentar el efecto de animación en móvil */
+    section {
+      overflow-x: hidden;
     }
   }
 
